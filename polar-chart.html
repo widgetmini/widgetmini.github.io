@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" type="image/svg+xml" href="/imgs/logo.ico" />
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Mini Widget | The best polar chart components for web">
+  <meta property="og:description" content="Polar Chart Widget ! It has many choices and easy customization with light/dark theme support">
+  <meta property="og:image" content="https://miniwidget.com/imgs/logo.svg">
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="Mini Widget | The best polar chart components for web">
+  <meta property="twitter:description" content="Polar Chart Widget ! It has many choices and easy customization with light/dark theme support">
+  <meta property="twitter:image" content="https://miniwidget.com/imgs/logo.svg">
+  <meta name="author" content="kimthiendung@gmail.com">
+  <meta name="keywords" content="polar chart, chart components, custom element, web component, web module, free components">
+  <meta name="description" content="Polar Chart Widget ! It has many choices and easy customization with light/dark theme support">
+  <title>Mini Widget | The best polar chart components for web</title>
+  <script type="module" crossorigin src="/static/common/apexcharts.1ffe166b.js"></script>
+  <script type="module" crossorigin src="/static/common/plugins.js.58f9c6ae.js"></script>
+  <script type="module" crossorigin src="/static/common/highlight.js.f3015274.js"></script>
+  <script type="module" crossorigin src="/static/common/plyr.ea0f65b7.js"></script>
+  <script type="module" crossorigin src="/static/common/keen-slider.014b2aed.js"></script>
+  <script type="module" crossorigin src="/static/common/main.615d1257.js"></script>
+  <link rel="stylesheet" href="/static/common/main.e0dc25da.css">
+  <link rel="stylesheet" href="/static/common/highlight.eac0d35b.css">
+  <link rel="stylesheet" href="/static/common/plyr.f7ca2171.css">
+  <link rel="stylesheet" href="/static/common/keen-slider.32ce0960.css">
+</head>
+
+<body x-data="_stt">
+  <div class="w-screen h-screen flex justify-center items-center bg-neutral-content" :data-theme="[$store.hub.dark ? 'dark': 'light']" x-show="$store.hub.loading" x-cloak>
+    <img src="/imgs/loading-200.svg">
+  </div>
+  <div x-show="!$store.hub.loading" style="display: none;" x-cloak>
+    <div class="bg-neutral-content text-base-content" id="app" :data-theme="[$store.hub.dark ? 'dark': 'light']">
+      <div class="w-full flex flex-col lg:h-screen items-stretch lg:overflow-hidden">
+        <div class="flex-none w-full p-3">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center text-xl font-semibold">
+              <a href="/" class="flex items-center"><img class="h-10 mr-2" src="/imgs/logo.svg" /> Mini Widget</a>
+              <button class="ml-2 btn btn-circle btn-ghost" @click="$store.hub.darkToggle()">
+                <svg x-cloak x-show="!$store.hub.dark" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                </svg>
+                <svg x-cloak x-show="$store.hub.dark" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                </svg>
+              </button>
+            </div>
+            <div class="flex items-center">
+              <div>
+                <time-digital :dark='$store.hub.dark' :background='$store.hub.dark ? "#1f242d" : "#edeff2"' size='24' font='monospace' rounded='24' shadow='false' />
+              </div>
+              <!--
+              <div class="ml-3">
+                <button class="btn btn-circle btn-ghost">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+                </button>
+                <button class="btn btn-circle btn-ghost">
+                  <div class="relative">
+                    <span class="absolute top-0 right-0 rounded-full bg-error w-2 h-2 animate-ping"></span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                    </svg>
+                  </div>
+                </button>
+              </div>
+              -->
+            </div>
+          </div>        </div>
+        <div class="flex-1 lg:flex px-3 overflow-hidden">
+          <div class="gap-3 grid grid-flow-row grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:block lg:w-40 p-1 mr-2 overflow-auto">
+            <a href="/charts.html" :class="$store.hub.navbar === '/charts.html' && 'outline outline-white'" class="relative flex h-30 mb-3 overflow-hidden cursor-pointer rounded-box group">
+              <img class="w-full object-cover transform duration-300 group-hover:scale-110" src="/imgs/charts.png" />
+              <span class="absolute w-full h-full flex items-end text-white text-opacity-70 sm:text-xl uppercase p-3 bg-gradient-to-t from-green-500 to-transparent">
+                Charts
+              </span>
+            </a>
+            <a href="/time.html" :class="$store.hub.navbar === '/time.html' && 'outline outline-white'" class="relative flex h-30 mb-3 overflow-hidden cursor-pointer rounded-box group">
+              <img class="w-full object-cover transform duration-300 group-hover:scale-110" src="/imgs/time.png" />
+              <span class="absolute w-full h-full flex items-end text-white text-opacity-70 sm:text-xl uppercase p-3 bg-gradient-to-t from-purple-500 to-transparent">
+                Time
+              </span>
+            </a>
+            <a href="/players.html" :class="$store.hub.navbar === '/players.html' && 'outline outline-white'" class="relative flex h-30 mb-3 overflow-hidden cursor-pointer rounded-box group">
+              <img class="w-full object-cover transform duration-300 group-hover:scale-110" src="/imgs/players.png" />
+              <span class="absolute w-full h-full flex items-end text-white text-opacity-70 sm:text-xl uppercase p-3 bg-gradient-to-t from-blue-500 to-transparent">
+                Players
+              </span>
+            </a>
+            <a href="/sliders.html" :class="$store.hub.navbar === '/sliders.html' && 'outline outline-white'" class="relative flex h-30 mb-3 overflow-hidden cursor-pointer rounded-box group">
+              <img class="w-full object-cover transform duration-300 group-hover:scale-110" src="/imgs/carousels.png" />
+              <span class="absolute w-full h-full flex items-end text-white text-opacity-70 sm:text-xl uppercase p-3 bg-gradient-to-t from-red-500 to-transparent">
+                Sliders
+              </span>
+            </a>
+            <a href="/coming-soon.html" :class="$store.hub.navbar === '/coming-soon.html' && 'outline outline-white'" class="relative flex h-30 mb-3 overflow-hidden cursor-pointer rounded-box group">
+              <img class="w-full object-cover transform duration-300 group-hover:scale-110" src="/imgs/weather.png" />
+              <span class="absolute w-full h-full flex items-end text-white text-opacity-70 sm:text-xl uppercase p-3 bg-gradient-to-t from-yellow-500 to-transparent">
+                Weather
+              </span>
+            </a>
+          </div>          <!-- Main -->
+          <div id="main" class="flex-1 overflow-auto rounded-box bg-base-100 p-4 divide-y divide-base-100" x-bind="_stt_main">
+            
+            <div>
+              <h1 class="text-2xl font-semibold mb-3 capitalize" title="polar chart">
+                polar chart
+                <span class="flex w-12 border-b-4 border-primary"></span>
+              </h1>
+              <div class="mb-6">
+                <chart-pie 
+                  :dark="$store.polar.dark"
+                  :type="$store.polar.type"
+                  :horizontal="$store.polar.horizontal"
+                  :background="$store.polar.background"
+                  :colors="JSON.stringify($store.polar.colors)"
+                  :monochrome="$store.polar.monochrome"
+                  :title="$store.polar.title"
+                  :height="$store.polar.height"
+                  :polar-rings='$store.polar.polarRings'
+                  :polar-spokes='$store.polar.polarSpokes'
+                  :stroke-width="$store.polar.strokeWidth"
+                  :stroke-dashes="$store.polar.strokeDashes"
+                  :fill-solid="$store.polar.fillSolid"
+                  :categories="$store.polar.categories"
+                  :values="$store.polar.values"
+                  :data-labels="$store.polar.dataLabels"
+                  :toolbar="$store.polar.toolbar"
+                  :table="$store.polar.table"
+                  :table-width="$store.polar.tableWidth"
+                />
+              </div>
+              <div class="md:grid md:grid-cols-2 xl:grid-cols-3 auto-rows-max gap-3 capitalize">
+                <label class="label cursor-pointer bg-base-200 rounded-sm px-2">
+                  <span class="label-text">dark</span>
+                  <input type="checkbox" :checked="$store.polar.dark" class="checkbox checkbox-primary" x-on:click="$store.polar.dark = !$store.polar.dark"/>
+                </label>
+                <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
+                  <label class="text-sm mr-2">type</label>
+                  <input type="text" x-model="$store.polar.type" disabled class="input input-sm input-primary input-bordered w-full" />
+                </div>
+                <label class="label cursor-pointer bg-base-200 rounded-sm px-2">
+                  <span class="label-text">background</span>
+                  <input type="checkbox" :checked="$store.polar.background" class="checkbox checkbox-primary" x-on:click="$store.polar.background = !$store.polar.background"/>
+                </label>
+                <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
+                  <label class="text-sm mr-2">colors</label>
+                  <template x-for="(color, i) in $store.polar.colors">
+                    <input type="color" x-model="$store.polar.colors[i]" class="input input-sm input-primary input-bordered w-full" />
+                  </template>
+                </div>
+                <label class="label cursor-pointer bg-base-200 rounded-sm px-2">
+                  <span class="label-text">monochrome</span>
+                  <input type="checkbox" :checked="$store.polar.monochrome" class="checkbox checkbox-primary" x-on:click="$store.polar.monochrome = !$store.polar.monochrome"/>
+                </label>
+                <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
+                  <label class="text-sm mr-2">title</label>
+                  <input type="text" x-model="$store.polar.title" class="input input-sm input-primary input-bordered w-full" />
+                </div>
+                <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
+                  <label class="text-sm mr-2">height</label>
+                  <input type="text" x-model="$store.polar.height" class="input input-sm input-primary input-bordered w-full" />
+                </div>
+                <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
+                  <label class="text-sm mr-2">polar rings</label>
+                  <input type="number" min="0" x-model="$store.polar.polarRings" class="input input-sm input-primary input-bordered w-full" />
+                </div>
+                <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
+                  <label class="text-sm mr-2">polar spokes</label>
+                  <input type="number" min="0" x-model="$store.polar.polarSpokes" class="input input-sm input-primary input-bordered w-full" />
+                </div>
+                <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
+                  <label class="text-sm mr-2">stroke width</label>
+                  <input type="number" min="0" x-model="$store.polar.strokeWidth" class="input input-sm input-primary input-bordered w-full" />
+                </div>
+                <label class="label cursor-pointer bg-base-200 rounded-sm px-2">
+                  <span class="label-text">fill solid</span>
+                  <input type="checkbox" :checked="$store.polar.fillSolid" class="checkbox checkbox-primary" x-on:click="$store.polar.fillSolid = !$store.polar.fillSolid"/>
+                </label>
+                <label class="label cursor-pointer bg-base-200 rounded-sm px-2">
+                  <span class="label-text">data labels</span>
+                  <input type="checkbox" :checked="$store.polar.dataLabels" class="checkbox checkbox-primary" x-on:click="$store.polar.dataLabels = !$store.polar.dataLabels"/>
+                </label>
+                <label class="label cursor-pointer bg-base-200 rounded-sm px-2">
+                  <span class="label-text">toolbar</span>
+                  <input type="checkbox" :checked="$store.polar.toolbar" class="checkbox checkbox-primary" x-on:click="$store.polar.toolbar = !$store.polar.toolbar"/>
+                </label>
+                <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
+                  <label class="text-sm mr-2">table width</label>
+                  <input type="text" x-model="$store.polar.tableWidth" class="input input-sm input-primary input-bordered w-full" />
+                </div>
+                <div class="md:col-span-2 xl:col-span-3 flex items-center bg-base-200 rounded-sm py-1 px-2">
+                  <label class="text-sm mr-2">categories
+                    <div class="flex items-center">
+                      <button class="btn btn-xs btn-outline btn-primary" @click="copy($store.polar.categories)">copy</button>
+                      <div class="tooltip tooltip-right" data-tip="It's array refer to https://jsonformatter.org/">
+                        <a href="https://jsonformatter.org/" target="_blank" class="pl-1 btn btn-xs btn-circle btn-link">
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
+                          </svg>            
+                        </a>
+                      </div>
+                    </div>
+                  </label>
+                  <textarea type="text" x-model="$store.polar.categories" class="textarea textarea-primary textarea-bordered w-full"></textarea>
+                </div>
+                <div class="md:col-span-2 xl:col-span-3 flex items-center bg-base-200 rounded-sm py-1 px-2">
+                  <label class="text-sm mr-2">values
+                    <div class="flex items-center">
+                      <button class="btn btn-xs btn-outline btn-primary" @click="copy($store.polar.values)">copy</button>
+                      <div class="tooltip tooltip-right" data-tip="It's array refer to https://jsonformatter.org/">
+                        <a href="https://jsonformatter.org/" target="_blank" class="pl-1 btn btn-xs btn-circle btn-link">
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
+                          </svg>            
+                        </a>
+                      </div>
+                    </div>
+                  </label>
+                  <textarea type="text" x-model="$store.polar.values" class="textarea textarea-primary textarea-bordered w-full"></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="mt-6">
+              <div class="font-semibold">Import into HTML (Include it in your html)</div>
+              <code-markup data='<script src="https://miniwidget.com/modules/chart-pie.js"></script>' />
+            </div>
+            <div>
+              <div class="font-semibold">Usage</div>
+              <code-markup :data="$store.polar.tag()" />
+            </div>
+            
+          </div>
+          <!-- END Main -->
+        </div>
+      </div>
+    </div>
+    <button class="btn btn-circle btn-primary fixed bottom-2 right-2" x-cloak x-show="_stt_on" x-bind="_stt_trigger">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+      </svg>
+    </button>
+  </div>
+  
+  
+</body>
+
+</html>
