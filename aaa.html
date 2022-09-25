@@ -6,27 +6,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="shortcut icon" type="image/svg+xml" href="/imgs/logo.ico" />
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Mini Widget | The best mixed line bar chart components for web">
-  <meta property="og:description" content="Mixed Line Bar Chart Widget ! It has many choices and easy customization with light/dark theme support">
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
   <meta property="og:image" content="https://miniwidget.com/imgs/logo.svg">
   <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:title" content="Mini Widget | The best mixed line bar chart components for web">
-  <meta property="twitter:description" content="Mixed Line Bar Chart Widget ! It has many choices and easy customization with light/dark theme support">
+  <meta property="twitter:title" content="">
+  <meta property="twitter:description" content="">
   <meta property="twitter:image" content="https://miniwidget.com/imgs/logo.svg">
   <meta name="author" content="kimthiendung@gmail.com">
-  <meta name="keywords" content="mixed line bar chart, chart components, custom element, web component, web module, free components">
-  <meta name="description" content="Mixed Line Bar Chart Widget ! It has many choices and easy customization with light/dark theme support">
-  <title>Mini Widget | The best mixed line bar chart components for web</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <title></title>
   <script type="module" crossorigin src="/static/common/apexcharts.1ffe166b.js"></script>
   <script type="module" crossorigin src="/static/common/plugins.js.58f9c6ae.js"></script>
   <script type="module" crossorigin src="/static/common/highlight.js.f3015274.js"></script>
   <script type="module" crossorigin src="/static/common/plyr.ea0f65b7.js"></script>
   <script type="module" crossorigin src="/static/common/keen-slider.014b2aed.js"></script>
-  <script type="module" crossorigin src="/static/common/main.f1e82d7d.js"></script>
-  <link rel="stylesheet" href="/static/common/main.ba114f04.css">
+  <script type="module" crossorigin src="/static/common/main.615d1257.js"></script>
   <link rel="stylesheet" href="/static/common/highlight.eac0d35b.css">
   <link rel="stylesheet" href="/static/common/plyr.f7ca2171.css">
   <link rel="stylesheet" href="/static/common/keen-slider.32ce0960.css">
+  <link rel="stylesheet" href="/static/common/main.e0dc25da.css">
 </head>
 
 <body x-data="_stt">
@@ -106,94 +106,84 @@
           <div id="main" class="flex-1 overflow-auto rounded-box bg-base-100 p-4 divide-y divide-base-100" x-bind="_stt_main">
             
             <div>
-              <h1 class="text-2xl font-semibold mb-3 capitalize" title="mixed line bar chart">
-                mixed line bar chart
+              <h1 class="text-2xl font-semibold mb-3 capitalize" title="">
+                
                 <span class="flex w-12 border-b-4 border-primary"></span>
               </h1>
               <div class="mb-6">
-                <chart-mixed
-                  :dark="$store.mixed3.dark"
-                  :background="$store.mixed3.background"
-                  :colors="JSON.stringify($store.mixed3.colors)"
-                  :title="$store.mixed3.title"
-                  :height="$store.mixed3.height"
-                  :stroke="$store.mixed3.stroke"
-                  :stroke-width="$store.mixed3.strokeWidth"
-                  :stroke-dashes="$store.mixed3.strokeDashes"
-                  :fill-solid="$store.mixed3.fillSolid"
-                  :yaxis="$store.mixed3.yaxis"
-                  :categories="$store.mixed3.categories"
-                  :series="$store.mixed3.series"
-                  :markers="$store.mixed3.markers"
-                  :data-labels="$store.mixed3.dataLabels"
-                  :toolbar="$store.mixed3.toolbar"
-                  :table="$store.mixed3.table"
-                  :table-width="$store.mixed3.tableWidth"
+                <chart-area
+                  :dark="$store.area.dark"
+                  :background="$store.area.background"
+                  :colors="JSON.stringify($store.area.colors)"
+                  :title="$store.area.title"
+                  :height="$store.area.height"
+                  :stroke="$store.area.stroke"
+                  :stroke-width="$store.area.strokeWidth"
+                  :stroke-dashes="$store.area.strokeDashes"
+                  :fill-solid="$store.area.fillSolid"
+                  :categories="$store.area.categories"
+                  :series="$store.area.series"
+                  :data-labels="$store.area.dataLabels"
+                  :toolbar="$store.area.toolbar"
+                  :table="$store.area.table"
+                  :table-width="$store.area.tableWidth"
                 />
               </div>
               <div class="md:grid md:grid-cols-2 xl:grid-cols-3 auto-rows-max gap-3 capitalize">
                 <label class="label cursor-pointer bg-base-200 rounded-sm px-2">
                   <span class="label-text">dark</span>
-                  <input type="checkbox" :checked="$store.mixed3.dark" class="checkbox checkbox-primary" x-on:click="$store.mixed3.dark = !$store.mixed3.dark"/>
+                  <input type="checkbox" :checked="$store.area.dark" class="checkbox checkbox-primary" x-on:click="$store.area.dark = !$store.area.dark"/>
                 </label>
                 <label class="label cursor-pointer bg-base-200 rounded-sm px-2">
                   <span class="label-text">background</span>
-                  <input type="checkbox" :checked="$store.mixed3.background" class="checkbox checkbox-primary" x-on:click="$store.mixed3.background = !$store.mixed3.background"/>
+                  <input type="checkbox" :checked="$store.area.background" class="checkbox checkbox-primary" x-on:click="$store.area.background = !$store.area.background"/>
                 </label>
                 <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
                   <label class="text-sm mr-2">colors</label>
-                  <template x-for="(color, i) in $store.mixed3.colors">
-                    <input type="color" x-model="$store.mixed3.colors[i]" class="input input-sm input-primary input-bordered w-full" />
+                  <template x-for="(color, i) in $store.area.colors">
+                    <input type="color" x-model="$store.area.colors[i]" class="input input-sm input-primary input-bordered w-full" />
                   </template>
                 </div>
                 <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
                   <label class="text-sm mr-2">title</label>
-                  <input type="text" x-model="$store.mixed3.title" class="input input-sm input-primary input-bordered w-full" />
+                  <input type="text" x-model="$store.area.title" class="input input-sm input-primary input-bordered w-full" />
                 </div>
                 <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
                   <label class="text-sm mr-2">height</label>
-                  <input type="text" x-model="$store.mixed3.height" class="input input-sm input-primary input-bordered w-full" />
+                  <input type="text" x-model="$store.area.height" class="input input-sm input-primary input-bordered w-full" />
                 </div>
                 <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
                   <label class="text-sm mr-2">stroke</label>
-                  <input type="text" x-model="$store.mixed3.stroke" placeholder="smooth or straight or stepline" class="input input-sm input-primary input-bordered w-full" />
+                  <input type="text" x-model="$store.area.stroke" placeholder="smooth or straight or stepline" class="input input-sm input-primary input-bordered w-full" />
                 </div>
                 <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
                   <label class="text-sm mr-2">stroke width</label>
-                  <input type="number" min="0" x-model="$store.mixed3.strokeWidth" class="input input-sm input-primary input-bordered w-full" />
+                  <input type="number" min="0" x-model="$store.area.strokeWidth" class="input input-sm input-primary input-bordered w-full" />
                 </div>
                 <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
                   <label class="text-sm mr-2">stroke dashes</label>
-                  <input type="number" min="0" x-model="$store.mixed3.strokeDashes" class="input input-sm input-primary input-bordered w-full" />
+                  <input type="number" min="0" x-model="$store.area.strokeDashes" class="input input-sm input-primary input-bordered w-full" />
                 </div>
                 <label class="label cursor-pointer bg-base-200 rounded-sm px-2">
                   <span class="label-text">fill solid</span>
-                  <input type="checkbox" :checked="$store.mixed3.fillSolid" class="checkbox checkbox-primary" x-on:click="$store.mixed3.fillSolid = !$store.mixed3.fillSolid"/>
+                  <input type="checkbox" :checked="$store.area.fillSolid" class="checkbox checkbox-primary" x-on:click="$store.area.fillSolid = !$store.area.fillSolid"/>
                 </label>
-                <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
-                  <label class="text-sm mr-2">markers</label>
-                  <input type="number" min="0" x-model="$store.mixed3.markers" class="input input-sm input-primary input-bordered w-full" />
-                </div>
                 <label class="label cursor-pointer bg-base-200 rounded-sm px-2">
                   <span class="label-text">data labels</span>
-                  <input type="checkbox" :checked="$store.mixed3.dataLabels" class="checkbox checkbox-primary" x-on:click="$store.mixed3.dataLabels = !$store.mixed3.dataLabels"/>
+                  <input type="checkbox" :checked="$store.area.dataLabels" class="checkbox checkbox-primary" x-on:click="$store.area.dataLabels = !$store.area.dataLabels"/>
                 </label>
                 <label class="label cursor-pointer bg-base-200 rounded-sm px-2">
                   <span class="label-text">toolbar</span>
-                  <input type="checkbox" :checked="$store.mixed3.toolbar" class="checkbox checkbox-primary" x-on:click="$store.mixed3.toolbar = !$store.mixed3.toolbar"/>
+                  <input type="checkbox" :checked="$store.area.toolbar" class="checkbox checkbox-primary" x-on:click="$store.area.toolbar = !$store.area.toolbar"/>
                 </label>
                 <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
                   <label class="text-sm mr-2">table width</label>
-                  <input type="text" x-model="$store.mixed3.tableWidth" class="input input-sm input-primary input-bordered w-full" />
+                  <input type="text" x-model="$store.area.tableWidth" class="input input-sm input-primary input-bordered w-full" />
                 </div>
-                <div class="md:col-span-2 xl:col-span-3 flex items-center bg-base-200 rounded-sm py-1 px-2">
-                  <label class="text-sm mr-2">yaxis</label>
-                  <textarea type="text" x-model="$store.mixed3.yaxis" class="textarea textarea-primary textarea-bordered w-full"></textarea>
-                </div>
-                <div class="md:col-span-2 xl:col-span-3 flex items-center bg-base-200 rounded-sm py-1 px-2">
+                <div class="md:col-span-1 xl:col-span-1 bg-base-200 rounded-sm py-1 px-2">
                   <label class="text-sm mr-2">categories
                     <div class="flex items-center">
-                      <button class="btn btn-xs btn-outline btn-primary" @click="copy($store.mixed3.categories)">copy</button>
+                      <button class="btn btn-xs btn-outline btn-primary" @click="copy($store.area.categories)">copy</button>
                       <div class="tooltip tooltip-right" data-tip="It's array refer to https://jsonformatter.org/">
                         <a href="https://jsonformatter.org/" target="_blank" class="pl-1 btn btn-xs btn-circle btn-link">
                           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -203,12 +193,17 @@
                       </div>
                     </div>
                   </label>
-                  <textarea type="text" x-model="$store.mixed3.categories" class="textarea textarea-primary textarea-bordered w-full"></textarea>
+                  <input-array :data="$store.area.categories" onchange="javascript:onCategories(event)"/>
+                  <script>
+                    function onCategories (e) {
+                      if (e.detail) Alpine.store('area', {...Alpine.store("area"), categories: JSON.stringify(e.detail)})
+                    }
+                  </script>
                 </div>
-                <div class="md:col-span-2 xl:col-span-3 flex items-center bg-base-200 rounded-sm py-1 px-2">
+                <div class="md:col-span-1 xl:col-span-2 bg-base-200 rounded-sm py-1 px-2">
                   <label class="text-sm mr-2">series
                     <div class="flex items-center">
-                      <button class="btn btn-xs btn-outline btn-primary" @click="copy($store.mixed3.series)">copy</button>
+                      <button class="btn btn-xs btn-outline btn-primary" @click="copy($store.area.series)">copy</button>
                       <div class="tooltip tooltip-right" data-tip="It's array refer to https://jsonformatter.org/">
                         <a href="https://jsonformatter.org/" target="_blank" class="pl-1 btn btn-xs btn-circle btn-link">
                           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -218,17 +213,23 @@
                       </div>
                     </div>
                   </label>
-                  <textarea type="text" x-model="$store.mixed3.series" class="textarea textarea-primary textarea-bordered w-full"></textarea>
+                  <input-array-object keys='["name","data"]' :data="$store.area.series" onchange="javascript:onSeries(event)"/>
+                  <script>
+                    function onSeries (e) {
+                      console.log(e.detail)
+                      if (e.detail) Alpine.store('area', {...Alpine.store("area"), series: JSON.stringify(e.detail)})
+                    }
+                  </script>
                 </div>
               </div>
             </div>
             <div class="mt-6">
               <div class="font-semibold">Import into HTML (Include it in your html)</div>
-              <code-markup data='<script type="module" src="https://miniwidget.com/modules/chart-mixed.js"></script>' />
+              <code-markup data='<script src="modules/chart-area.js"></script>' />
             </div>
             <div>
               <div class="font-semibold">Usage</div>
-              <code-markup :data="$store.mixed3.tag()" />
+              <code-markup :data="$store.area.tag()" />
             </div>
             
           </div>
