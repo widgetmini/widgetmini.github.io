@@ -6,17 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="shortcut icon" type="image/svg+xml" href="/imgs/logo.ico" />
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Mini Widget | The best slider custom slot components for web">
-  <meta property="og:description" content="Slider Custom Slot Widget ! It has many choices and easy customization with light/dark theme support">
+  <meta property="og:title" content="Mini Widget | The best emulator components for web">
+  <meta property="og:description" content="The 5+ best emulator widgets to include on websites">
   <meta property="og:image" content="https://miniwidget.com/imgs/logo.svg">
   <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:title" content="Mini Widget | The best slider custom slot components for web">
-  <meta property="twitter:description" content="Slider Custom Slot Widget ! It has many choices and easy customization with light/dark theme support">
+  <meta property="twitter:title" content="Mini Widget | The best emulator components for web">
+  <meta property="twitter:description" content="The 5+ best emulator widgets to include on websites">
   <meta property="twitter:image" content="https://miniwidget.com/imgs/logo.svg">
   <meta name="author" content="kimthiendung@gmail.com">
-  <meta name="keywords" content="slider custom slot, slider components, custom element, web component, web module, free components">
-  <meta name="description" content="Slider Custom Slot Widget ! It has many choices and easy customization with light/dark theme support">
-  <title>Mini Widget | The best slider custom slot components for web</title>
+  <meta name="keywords" content="emulator components, custom element, web component, web module, free components">
+  <meta name="description" content="The 5+ best emulator widgets to include on websites">
+  <title>Mini Widget | The best emulator components for web</title>
   <script type="module" crossorigin src="/static/common/apexcharts.1ffe166b.js"></script>
   <script type="module" crossorigin src="/static/common/plugins.js.58f9c6ae.js"></script>
   <script type="module" crossorigin src="/static/common/highlight.js.f3015274.js"></script>
@@ -111,115 +111,27 @@
           </div>          <!-- Main -->
           <div id="main" class="flex-1 overflow-auto rounded-box bg-base-100 p-4 divide-y divide-base-100" x-bind="_stt_main">
             
+            <h1 class="hidden" title="emulator components">
+              emulator components
+            </h1>
             <div>
-              <h1 class="text-2xl font-semibold mb-3 capitalize" title="slider custom slot">
-                slider custom slot
+              <h2 class="text-2xl font-semibold mb-3" title="Emulator">
+                Emulator
                 <span class="flex w-12 border-b-4 border-primary"></span>
-              </h1>
-              <div class="md:flex">
-                <div class="flex-none md:w-96 md:mr-3 mb-3">
-                  <slider-slot
-                    :items="$store.slider9.items"
-                    :dark="$store.slider9.dark"
-                    :mode="$store.slider9.mode"
-                    :vertical="$store.slider9.vertical"
-                    :effect="$store.slider9.effect"
-                    :control="$store.slider9.control"
-                    :control-middle="$store.slider9.controlMiddle"
-                    :dot="$store.slider9.dot"
-                    :loops="$store.slider9.loops"
-                    :auto-play="$store.slider9.autoPlay"
-                    :lazy-load="$store.slider9.lazyLoad"
-                    :per-view="$store.slider9.perView"
-                    :spacing="$store.slider9.spacing"
-                    :center-slides="$store.slider9.centerSlides"
-                    :width-ratio="$store.slider9.widthRatio"
-                    :height-ratio="$store.slider9.heightRatio"
-                    id="slider-custom-slot"
-                  >
-                  <div slot="1" class="flex h-full bg-primary text-white items-center justify-center text-4xl">1</div>
-                  <div slot="2" class="flex h-full bg-secondary text-white items-center justify-center text-4xl">2</div>
-                  <div slot="3" class="flex h-full bg-accent text-white items-center justify-center text-4xl">3</div>
-                  <div slot="4" class="flex h-full bg-info text-white items-center justify-center text-4xl">4</div>
-                  <div slot="5" class="flex h-full bg-success text-white items-center justify-center text-4xl">5</div>
-                  <div slot="6" class="flex h-full bg-warning text-white items-center justify-center text-4xl">6</div>
-                  <div slot="7" class="flex h-full bg-error text-white items-center justify-center text-4xl">7</div>
-                </slider-slot>
-                </div>
-                <div class="flex-1 max-w-full md:grid md:grid-cols-2 xl:grid-cols-3 auto-rows-max gap-3 capitalize">   
-                  <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
-                    <label class="text-sm mr-2">items</label>
-                    <input type="number" min="1" x-model="$store.slider9.items" class="input input-sm input-primary input-bordered w-full" />
-                  </div>
-                  <label class="label cursor-pointer bg-base-200 rounded-sm px-2">
-                    <span class="label-text">dark</span>
-                    <input type="checkbox" :checked="$store.slider9.dark" class="checkbox checkbox-primary" x-on:click="$store.slider9.dark = !$store.slider9.dark"/>
-                  </label>
-                  <label class="label cursor-pointer bg-base-200 rounded-sm px-2">
-                    <span class="label-text">mode</span>
-                    <input type="text" x-model="$store.slider9.mode" placeholder="snap or free or free-snap" class="input input-sm input-primary input-bordered w-full" />
-                  </label>
-                  <label class="label cursor-pointer bg-base-200 rounded-sm px-2">
-                    <span class="label-text">vertical</span>
-                    <input type="checkbox" :checked="$store.slider9.vertical" class="checkbox checkbox-primary" x-on:click="$store.slider9.vertical = !$store.slider9.vertical"/>
-                  </label>
-                  <label class="label cursor-pointer bg-base-200 rounded-sm px-2">
-                    <span class="label-text">effect</span>
-                    <input type="text" x-model="$store.slider9.effect" placeholder="empty or zoom or fade" class="input input-sm input-primary input-bordered w-full" />
-                  </label>
-                  <label class="label cursor-pointer bg-base-200 rounded-sm px-2">
-                    <span class="label-text">control</span>
-                    <input type="checkbox" :checked="$store.slider9.control" class="checkbox checkbox-primary" x-on:click="$store.slider9.control = !$store.slider9.control"/>
-                  </label>
-                  <label class="label cursor-pointer bg-base-200 rounded-sm px-2">
-                    <span class="label-text">controlMiddle</span>
-                    <input type="checkbox" :checked="$store.slider9.controlMiddle" class="checkbox checkbox-primary" x-on:click="$store.slider9.controlMiddle = !$store.slider9.controlMiddle"/>
-                  </label>
-                  <label class="label cursor-pointer bg-base-200 rounded-sm px-2">
-                    <span class="label-text">dot</span>
-                    <input type="checkbox" :checked="$store.slider9.dot" class="checkbox checkbox-primary" x-on:click="$store.slider9.dot = !$store.slider9.dot"/>
-                  </label>
-                  <label class="label cursor-pointer bg-base-200 rounded-sm px-2">
-                    <span class="label-text">loops</span>
-                    <input type="checkbox" :checked="$store.slider9.loops" class="checkbox checkbox-primary" x-on:click="$store.slider9.loops = !$store.slider9.loops"/>
-                  </label>
-                  <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
-                    <label class="text-sm mr-2">auto play</label>
-                    <input type="number" min="0" x-model="$store.slider9.autoPlay" class="input input-sm input-primary input-bordered w-full" />
-                  </div>
-                  <label class="label cursor-pointer bg-base-200 rounded-sm px-2">
-                    <span class="label-text">lazy load</span>
-                    <input type="checkbox" :checked="$store.slider9.lazyLoad" class="checkbox checkbox-primary" x-on:click="$store.slider9.lazyLoad = !$store.slider9.lazyLoad"/>
-                  </label>
-                  <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
-                    <label class="text-sm mr-2">per view</label>
-                    <input type="number" min="1" x-model="$store.slider9.perView" class="input input-sm input-primary input-bordered w-full" />
-                  </div>
-                  <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
-                    <label class="text-sm mr-2">spacing</label>
-                    <input type="number" min="0" x-model="$store.slider9.spacing" class="input input-sm input-primary input-bordered w-full" />
-                  </div>
-                  <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
-                    <label class="text-sm mr-2">width ratio</label>
-                    <input type="number" min="1" x-model="$store.slider9.widthRatio" class="input input-sm input-primary input-bordered w-full" />
-                  </div>
-                  <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
-                    <label class="text-sm mr-2">height ratio</label>
-                    <input type="number" min="1" x-model="$store.slider9.heightRatio" class="input input-sm input-primary input-bordered w-full" />
-                  </div>
-                  <label class="label cursor-pointer bg-base-200 rounded-sm px-2">
-                    <span class="label-text">center slide</span>
-                    <input type="checkbox" :checked="$store.slider9.centerSlides" class="checkbox checkbox-primary" x-on:click="$store.slider9.centerSlides = !$store.slider9.centerSlides"/>
-                  </label>
-                </div>
-              </div>
-              <div class="mt-6">
-                <div class="font-semibold">Import into HTML (Include it in your html)</div>
-                <code-markup data='<script type="module" src="https://miniwidget.com/modules/slider-slot.js"></script>' />
-              </div>
-              <div>
-                <div class="font-semibold">Usage</div>
-                <code-markup :data="$store.slider9.tag()" />
+              </h2>
+              <div class="grid grid-cols-1 md:grid-cols-4 2xl:grid-cols-5 gap-3">
+                <a href="/emulator-box.html" class="bg-base-300 shadow-lg rounded-sm duration-300 transform hover:-translate-y-1 hover:shadow-xl">
+                  <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-base-100">Emulator Phone</h3>
+                  <img src="/imgs/emulator-box.jpg" class="bg-white w-full">
+                </a>
+                <a href="/emulator-iframe.html" class="bg-base-300 shadow-lg rounded-sm duration-300 transform hover:-translate-y-1 hover:shadow-xl">
+                  <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-base-100">Emulator Iframe</h3>
+                  <img src="/imgs/emulator-iframe.jpg" class="bg-white w-full">
+                </a>
+                <a href="/emulator-horizontal.html" class="col-span-2 bg-base-300 shadow-lg rounded-sm duration-300 transform hover:-translate-y-1 hover:shadow-xl">
+                  <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-base-100">Emulator Horizontal</h3>
+                  <img src="/imgs/emulator-horizontal.jpg" class="bg-white w-full">
+                </a>
               </div>
             </div>
             

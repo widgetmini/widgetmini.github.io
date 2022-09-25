@@ -22,8 +22,8 @@
   <script type="module" crossorigin src="/static/common/highlight.js.f3015274.js"></script>
   <script type="module" crossorigin src="/static/common/plyr.ea0f65b7.js"></script>
   <script type="module" crossorigin src="/static/common/keen-slider.014b2aed.js"></script>
-  <script type="module" crossorigin src="/static/common/main.f1e82d7d.js"></script>
-  <link rel="stylesheet" href="/static/common/main.ba114f04.css">
+  <script type="module" crossorigin src="/static/common/main.f2881dfe.js"></script>
+  <link rel="stylesheet" href="/static/common/main.674bef23.css">
   <link rel="stylesheet" href="/static/common/highlight.eac0d35b.css">
   <link rel="stylesheet" href="/static/common/plyr.f7ca2171.css">
   <link rel="stylesheet" href="/static/common/keen-slider.32ce0960.css">
@@ -96,6 +96,12 @@
                 Sliders
               </span>
             </a>
+            <a href="/emulators.html" :class="$store.hub.navbar === '/sliders.html' && 'outline outline-white'" class="relative flex h-30 mb-3 overflow-hidden cursor-pointer rounded-box group">
+              <img class="w-full object-cover transform duration-300 group-hover:scale-110" src="/imgs/phone.jpeg" />
+              <span class="absolute w-full h-full flex items-end text-white text-opacity-70 sm:text-xl uppercase p-3 bg-gradient-to-t from-orange-500 to-transparent">
+                Emulators
+              </span>
+            </a>
             <a href="/coming-soon.html" :class="$store.hub.navbar === '/coming-soon.html' && 'outline outline-white'" class="relative flex h-30 mb-3 overflow-hidden cursor-pointer rounded-box group">
               <img class="w-full object-cover transform duration-300 group-hover:scale-110" src="/imgs/weather.png" />
               <span class="absolute w-full h-full flex items-end text-white text-opacity-70 sm:text-xl uppercase p-3 bg-gradient-to-t from-yellow-500 to-transparent">
@@ -118,6 +124,14 @@
                   <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-base-100">Video Player</h3>
                   <img src="/imgs/player-video.jpg" class="bg-white w-full">
                 </a>
+                <a href="/player-audio.html" class="bg-base-300 shadow-lg rounded-sm duration-300 transform hover:-translate-y-1 hover:shadow-xl">
+                  <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-base-100">Audio Player</h3>
+                  <img src="/imgs/player-audio.png" class="bg-white w-full">
+                </a>
+                <a href="/player-vertical.html" class="row-span-3 bg-base-300 shadow-lg rounded-sm duration-300 transform hover:-translate-y-1 hover:shadow-xl">
+                  <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-base-100">Vertical Player</h3>
+                  <img src="/imgs/player-vertical.jpg" class="bg-white w-full">
+                </a>
                 <a href="/player-youtube.html" class="bg-base-300 shadow-lg rounded-sm duration-300 transform hover:-translate-y-1 hover:shadow-xl">
                   <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-base-100">Youtube Player</h3>
                   <img src="/imgs/player-youtube.jpeg" class="bg-white w-full">
@@ -125,14 +139,6 @@
                 <a href="/player-vimeo.html" class="bg-base-300 shadow-lg rounded-sm duration-300 transform hover:-translate-y-1 hover:shadow-xl">
                   <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-base-100">Vimeo Player</h3>
                   <img src="/imgs/player-vimeo.jpg" class="bg-white w-full">
-                </a>
-                <a href="/player-vertical.html" class="bg-base-300 shadow-lg rounded-sm duration-300 transform hover:-translate-y-1 hover:shadow-xl">
-                  <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-base-100">Vertical Player</h3>
-                  <img src="/imgs/player-vertical.jpg" class="bg-white w-full">
-                </a>
-                <a href="/player-audio.html" class="bg-base-300 shadow-lg rounded-sm duration-300 transform hover:-translate-y-1 hover:shadow-xl">
-                  <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-base-100">Audio Player</h3>
-                  <img src="/imgs/player-audio.png" class="bg-white w-full">
                 </a>
               </div>
             </div>

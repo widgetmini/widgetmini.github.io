@@ -6,17 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="shortcut icon" type="image/svg+xml" href="/imgs/logo.ico" />
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Mini Widget | The best slider custom slot components for web">
-  <meta property="og:description" content="Slider Custom Slot Widget ! It has many choices and easy customization with light/dark theme support">
+  <meta property="og:title" content="Mini Widget | The best emulator iframe components for web">
+  <meta property="og:description" content="Emulator Iframe Widget ! It has many choices and easy customization with light/dark theme support">
   <meta property="og:image" content="https://miniwidget.com/imgs/logo.svg">
   <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:title" content="Mini Widget | The best slider custom slot components for web">
-  <meta property="twitter:description" content="Slider Custom Slot Widget ! It has many choices and easy customization with light/dark theme support">
+  <meta property="twitter:title" content="Mini Widget | The best emulator iframe components for web">
+  <meta property="twitter:description" content="Emulator Iframe Widget ! It has many choices and easy customization with light/dark theme support">
   <meta property="twitter:image" content="https://miniwidget.com/imgs/logo.svg">
   <meta name="author" content="kimthiendung@gmail.com">
-  <meta name="keywords" content="slider custom slot, slider components, custom element, web component, web module, free components">
-  <meta name="description" content="Slider Custom Slot Widget ! It has many choices and easy customization with light/dark theme support">
-  <title>Mini Widget | The best slider custom slot components for web</title>
+  <meta name="keywords" content="emulator iframe, emulator components, custom element, web component, web module, free components">
+  <meta name="description" content="Emulator Iframe Widget ! It has many choices and easy customization with light/dark theme support">
+  <title>Mini Widget | The best emulator iframe components for web</title>
   <script type="module" crossorigin src="/static/common/apexcharts.1ffe166b.js"></script>
   <script type="module" crossorigin src="/static/common/plugins.js.58f9c6ae.js"></script>
   <script type="module" crossorigin src="/static/common/highlight.js.f3015274.js"></script>
@@ -111,115 +111,109 @@
           </div>          <!-- Main -->
           <div id="main" class="flex-1 overflow-auto rounded-box bg-base-100 p-4 divide-y divide-base-100" x-bind="_stt_main">
             
-            <div>
-              <h1 class="text-2xl font-semibold mb-3 capitalize" title="slider custom slot">
-                slider custom slot
-                <span class="flex w-12 border-b-4 border-primary"></span>
-              </h1>
+            <h1 class="text-2xl font-semibold mb-3 capitalize" title="emulator iframe">
+              emulator iframe
+              <span class="flex w-12 border-b-4 border-primary"></span>
+            </h1>
+            <div x-data="{
+              el: document.querySelector('#emulator'),
+              dark: false,
+              widthRatio: 9,
+              heightRatio: 16,
+              borderColor: '#000',
+              position: 'center',
+              camera: true,
+              cameraExtra: false,
+              cameraSize: 16,
+              cameraExtraSize: 16,
+              cameraTop: 4,
+              tag () {
+                return `<emulator-box 
+                          dark='${this.dark}'
+                          width-ratio='${this.widthRatio}'
+                          height-ratio='${this.heightRatio}'
+                          border-color='${this.borderColor}'
+                          position='${this.position}'
+                          camera='${this.camera}'
+                          camera-extra='${this.cameraExtra}'
+                          camera-size='${this.cameraSize}'
+                          camera-extra-size='${this.cameraExtraSize}'
+                          camera-top='${this.cameraTop}'
+                        >${this.el.innerHTML}</emulator-box>`
+              }
+            }">
               <div class="md:flex">
                 <div class="flex-none md:w-96 md:mr-3 mb-3">
-                  <slider-slot
-                    :items="$store.slider9.items"
-                    :dark="$store.slider9.dark"
-                    :mode="$store.slider9.mode"
-                    :vertical="$store.slider9.vertical"
-                    :effect="$store.slider9.effect"
-                    :control="$store.slider9.control"
-                    :control-middle="$store.slider9.controlMiddle"
-                    :dot="$store.slider9.dot"
-                    :loops="$store.slider9.loops"
-                    :auto-play="$store.slider9.autoPlay"
-                    :lazy-load="$store.slider9.lazyLoad"
-                    :per-view="$store.slider9.perView"
-                    :spacing="$store.slider9.spacing"
-                    :center-slides="$store.slider9.centerSlides"
-                    :width-ratio="$store.slider9.widthRatio"
-                    :height-ratio="$store.slider9.heightRatio"
-                    id="slider-custom-slot"
+                  <emulator-box 
+                    id="emulator"
+                    :dark="dark"
+                    :width-ratio="widthRatio"
+                    :height-ratio="heightRatio"
+                    :border-color="borderColor"
+                    :position="position"
+                    :camera="camera"
+                    :camera-extra="cameraExtra"
+                    :camera-size="cameraSize"
+                    :camera-extra-size="cameraExtraSize"
+                    :camera-top="cameraTop"
                   >
-                  <div slot="1" class="flex h-full bg-primary text-white items-center justify-center text-4xl">1</div>
-                  <div slot="2" class="flex h-full bg-secondary text-white items-center justify-center text-4xl">2</div>
-                  <div slot="3" class="flex h-full bg-accent text-white items-center justify-center text-4xl">3</div>
-                  <div slot="4" class="flex h-full bg-info text-white items-center justify-center text-4xl">4</div>
-                  <div slot="5" class="flex h-full bg-success text-white items-center justify-center text-4xl">5</div>
-                  <div slot="6" class="flex h-full bg-warning text-white items-center justify-center text-4xl">6</div>
-                  <div slot="7" class="flex h-full bg-error text-white items-center justify-center text-4xl">7</div>
-                </slider-slot>
+                  <iframe class="h-full w-full" src="https://www.youtube.com/embed/h3h035Eyz5A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </emulator-box>
                 </div>
-                <div class="flex-1 max-w-full md:grid md:grid-cols-2 xl:grid-cols-3 auto-rows-max gap-3 capitalize">   
-                  <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
-                    <label class="text-sm mr-2">items</label>
-                    <input type="number" min="1" x-model="$store.slider9.items" class="input input-sm input-primary input-bordered w-full" />
-                  </div>
+                <div class="flex-1 max-w-full md:grid md:grid-cols-2 xl:grid-cols-3 auto-rows-max gap-3 capitalize">
                   <label class="label cursor-pointer bg-base-200 rounded-sm px-2">
                     <span class="label-text">dark</span>
-                    <input type="checkbox" :checked="$store.slider9.dark" class="checkbox checkbox-primary" x-on:click="$store.slider9.dark = !$store.slider9.dark"/>
+                    <input type="checkbox" :checked="dark" class="checkbox checkbox-primary" x-on:click="dark = !dark"/>
                   </label>
-                  <label class="label cursor-pointer bg-base-200 rounded-sm px-2">
-                    <span class="label-text">mode</span>
-                    <input type="text" x-model="$store.slider9.mode" placeholder="snap or free or free-snap" class="input input-sm input-primary input-bordered w-full" />
-                  </label>
-                  <label class="label cursor-pointer bg-base-200 rounded-sm px-2">
-                    <span class="label-text">vertical</span>
-                    <input type="checkbox" :checked="$store.slider9.vertical" class="checkbox checkbox-primary" x-on:click="$store.slider9.vertical = !$store.slider9.vertical"/>
-                  </label>
-                  <label class="label cursor-pointer bg-base-200 rounded-sm px-2">
-                    <span class="label-text">effect</span>
-                    <input type="text" x-model="$store.slider9.effect" placeholder="empty or zoom or fade" class="input input-sm input-primary input-bordered w-full" />
-                  </label>
-                  <label class="label cursor-pointer bg-base-200 rounded-sm px-2">
-                    <span class="label-text">control</span>
-                    <input type="checkbox" :checked="$store.slider9.control" class="checkbox checkbox-primary" x-on:click="$store.slider9.control = !$store.slider9.control"/>
-                  </label>
-                  <label class="label cursor-pointer bg-base-200 rounded-sm px-2">
-                    <span class="label-text">controlMiddle</span>
-                    <input type="checkbox" :checked="$store.slider9.controlMiddle" class="checkbox checkbox-primary" x-on:click="$store.slider9.controlMiddle = !$store.slider9.controlMiddle"/>
-                  </label>
-                  <label class="label cursor-pointer bg-base-200 rounded-sm px-2">
-                    <span class="label-text">dot</span>
-                    <input type="checkbox" :checked="$store.slider9.dot" class="checkbox checkbox-primary" x-on:click="$store.slider9.dot = !$store.slider9.dot"/>
-                  </label>
-                  <label class="label cursor-pointer bg-base-200 rounded-sm px-2">
-                    <span class="label-text">loops</span>
-                    <input type="checkbox" :checked="$store.slider9.loops" class="checkbox checkbox-primary" x-on:click="$store.slider9.loops = !$store.slider9.loops"/>
-                  </label>
-                  <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
-                    <label class="text-sm mr-2">auto play</label>
-                    <input type="number" min="0" x-model="$store.slider9.autoPlay" class="input input-sm input-primary input-bordered w-full" />
-                  </div>
-                  <label class="label cursor-pointer bg-base-200 rounded-sm px-2">
-                    <span class="label-text">lazy load</span>
-                    <input type="checkbox" :checked="$store.slider9.lazyLoad" class="checkbox checkbox-primary" x-on:click="$store.slider9.lazyLoad = !$store.slider9.lazyLoad"/>
-                  </label>
-                  <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
-                    <label class="text-sm mr-2">per view</label>
-                    <input type="number" min="1" x-model="$store.slider9.perView" class="input input-sm input-primary input-bordered w-full" />
-                  </div>
-                  <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
-                    <label class="text-sm mr-2">spacing</label>
-                    <input type="number" min="0" x-model="$store.slider9.spacing" class="input input-sm input-primary input-bordered w-full" />
-                  </div>
                   <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
                     <label class="text-sm mr-2">width ratio</label>
-                    <input type="number" min="1" x-model="$store.slider9.widthRatio" class="input input-sm input-primary input-bordered w-full" />
+                    <input type="number" min="1" x-model="widthRatio" class="input input-sm input-primary input-bordered w-full" />
                   </div>
                   <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
                     <label class="text-sm mr-2">height ratio</label>
-                    <input type="number" min="1" x-model="$store.slider9.heightRatio" class="input input-sm input-primary input-bordered w-full" />
+                    <input type="number" min="1" x-model="heightRatio" class="input input-sm input-primary input-bordered w-full" />
+                  </div>
+                  <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
+                    <label class="text-sm mr-2">border color</label>
+                    <input type="color" x-model="borderColor" class="input input-sm input-primary input-bordered w-full" />
+                  </div>
+                  <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
+                    <label class="text-sm mr-2">position</label>
+                    <select x-model="position" class="select select-sm select-primary flex-1 max-w-full">
+                        <option>center</option>
+                        <option>right</option>
+                        <option>left</option>
+                    </select>
                   </div>
                   <label class="label cursor-pointer bg-base-200 rounded-sm px-2">
-                    <span class="label-text">center slide</span>
-                    <input type="checkbox" :checked="$store.slider9.centerSlides" class="checkbox checkbox-primary" x-on:click="$store.slider9.centerSlides = !$store.slider9.centerSlides"/>
+                    <span class="label-text">camera</span>
+                    <input type="checkbox" :checked="camera" class="checkbox checkbox-primary" x-on:click="camera = !camera"/>
                   </label>
+                  <label class="label cursor-pointer bg-base-200 rounded-sm px-2">
+                    <span class="label-text">camera extra</span>
+                    <input type="checkbox" :checked="cameraExtra" class="checkbox checkbox-primary" x-on:click="cameraExtra = !cameraExtra"/>
+                  </label>
+                  <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
+                    <label class="text-sm mr-2">camera size</label>
+                    <input type="number" min="1" x-model="cameraSize" class="input input-sm input-primary input-bordered w-full" />
+                  </div>
+                  <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
+                    <label class="text-sm mr-2">camera extraSize</label>
+                    <input type="number" min="1" x-model="cameraExtraSize" class="input input-sm input-primary input-bordered w-full" />
+                  </div>
+                  <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
+                    <label class="text-sm mr-2">camera top</label>
+                    <input type="number" min="1" x-model="cameraTop" class="input input-sm input-primary input-bordered w-full" />
+                  </div>
                 </div>
               </div>
               <div class="mt-6">
                 <div class="font-semibold">Import into HTML (Include it in your html)</div>
-                <code-markup data='<script type="module" src="https://miniwidget.com/modules/slider-slot.js"></script>' />
+                <code-markup data='<script type="module" src="https://miniwidget.com/modules/emulator-box.js"></script>' />
               </div>
               <div>
                 <div class="font-semibold">Usage</div>
-                <code-markup :data="$store.slider9.tag()" />
+                <code-markup :data="tag()" />
               </div>
             </div>
             
