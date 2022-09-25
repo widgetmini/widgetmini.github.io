@@ -1,0 +1,29 @@
+{
+  "name": "miniwidget.com",
+  "version": "1.0.0",
+  "description": "The best widget web component",
+  "main": "modules/chart-mixed.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/widgetmini/widgetmini.github.io.git"
+  },
+  "keywords": [
+    "custom",
+    "element",
+    "module",
+    "web",
+    "widget",
+    "web",
+    "web",
+    "component"
+  ],
+  "author": "kimthiendung@gmail.com",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/widgetmini/widgetmini.github.io/issues"
+  },
+  "homepage": "https://github.com/widgetmini/widgetmini.github.io#readme"
+}
