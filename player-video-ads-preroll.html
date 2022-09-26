@@ -6,17 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="shortcut icon" type="image/svg+xml" href="/imgs/logo.ico" />
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Mini Widget | The best emulator iframe components for web">
-  <meta property="og:description" content="Emulator Iframe Widget ! It has many choices and easy customization with light/dark theme support">
+  <meta property="og:title" content="Mini Widget | The best video ads preroll components for web">
+  <meta property="og:description" content="Video Ads Preroll Widget ! It has many choices and easy customization with light/dark theme support">
   <meta property="og:image" content="https://miniwidget.com/imgs/logo.svg">
   <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:title" content="Mini Widget | The best emulator iframe components for web">
-  <meta property="twitter:description" content="Emulator Iframe Widget ! It has many choices and easy customization with light/dark theme support">
+  <meta property="twitter:title" content="Mini Widget | The best video ads preroll components for web">
+  <meta property="twitter:description" content="Video Ads Preroll Widget ! It has many choices and easy customization with light/dark theme support">
   <meta property="twitter:image" content="https://miniwidget.com/imgs/logo.svg">
   <meta name="author" content="kimthiendung@gmail.com">
-  <meta name="keywords" content="emulator iframe, emulator components, custom element, web component, web module, free components">
-  <meta name="description" content="Emulator Iframe Widget ! It has many choices and easy customization with light/dark theme support">
-  <title>Mini Widget | The best emulator iframe components for web</title>
+  <meta name="keywords" content="video ads preroll, player components, custom element, web component, web module, free components">
+  <meta name="description" content="Video Ads Preroll Widget ! It has many choices and easy customization with light/dark theme support">
+  <title>Mini Widget | The best video ads preroll components for web</title>
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -118,59 +118,82 @@
           </div>          <!-- Main -->
           <div id="main" class="flex-1 overflow-auto rounded-box bg-base-100 p-4 divide-y divide-base-100" x-bind="_stt_main">
             
-            <h1 class="text-2xl font-semibold mb-3 capitalize" title="emulator iframe">
-              emulator iframe
+            <h1 class="text-2xl font-semibold mb-3 capitalize" title="video ads preroll">
+              video ads preroll
               <span class="flex w-12 border-b-4 border-primary"></span>
             </h1>
             <div x-data="{
-              el: document.querySelector('#emulator'),
-              dark: false,
-              widthRatio: 9,
-              heightRatio: 16,
-              borderColor: '#000',
-              position: 'center',
-              camera: true,
-              cameraExtra: false,
-              cameraSize: 16,
-              cameraExtraSize: 16,
-              cameraTop: 4,
+              video: '/videos/10s.mp4',
+              adsUrl: 'https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/single_ad_samples&ciu_szs=300x250&impl=s&gdfp_req=1&env=vp&output=vast&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ct%3Dlinear&correlator=',
+              color: '#e2e538',
+              poster: '/imgs/10s.jpg',
+              control: true,
+              autoPlay: false,
+              mute: false,
+              loops: false,
+              widthRatio: 16,
+              heightRatio: 9,
               tag () {
-                return `<emulator-box 
-                          dark='${this.dark}'
+                return `<player-box 
+                          video='${this.video}'
+                          ads-url='${this.adsUrl}'
+                          color='${this.color}'
+                          poster='${this.poster}'
+                          control='${this.control}'
+                          auto-play='${this.autoPlay}'
+                          mute='${this.mute}'
+                          loops='${this.loops}'
                           width-ratio='${this.widthRatio}'
                           height-ratio='${this.heightRatio}'
-                          border-color='${this.borderColor}'
-                          position='${this.position}'
-                          camera='${this.camera}'
-                          camera-extra='${this.cameraExtra}'
-                          camera-size='${this.cameraSize}'
-                          camera-extra-size='${this.cameraExtraSize}'
-                          camera-top='${this.cameraTop}'
-                        >${this.el.innerHTML}</emulator-box>`
+                          />`
               }
             }">
               <div class="md:flex">
                 <div class="flex-none md:w-96 md:mr-3 mb-3">
-                  <emulator-box 
-                    id="emulator"
-                    :dark="dark"
-                    :width-ratio="widthRatio"
-                    :height-ratio="heightRatio"
-                    :border-color="borderColor"
-                    :position="position"
-                    :camera="camera"
-                    :camera-extra="cameraExtra"
-                    :camera-size="cameraSize"
-                    :camera-extra-size="cameraExtraSize"
-                    :camera-top="cameraTop"
-                  >
-                  <iframe height="100%" width="100%" src="https://www.youtube.com/embed/h3h035Eyz5A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                  </emulator-box>
+                  <player-box 
+                  :video="video"
+                  :ads-url="adsUrl"
+                  :color="color"
+                  :poster="poster"
+                  :control="control"
+                  :auto-play="autoPlay"
+                  :mute="mute"
+                  :loops="loops"
+                  :width-ratio="widthRatio"
+                  :height-ratio="heightRatio"/>
                 </div>
                 <div class="flex-1 max-w-full md:grid md:grid-cols-2 xl:grid-cols-3 auto-rows-max gap-3 capitalize">
+                  <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
+                    <label class="text-sm mr-2">video</label>
+                    <input type="text" x-model="video" placeholder="link video" class="input input-sm input-primary input-bordered w-full" />
+                  </div>
+                  <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
+                    <label class="text-sm mr-2">ads url</label>
+                    <input type="text" x-model="adsUrl" placeholder="link video" class="input input-sm input-primary input-bordered w-full" />
+                  </div>
+                  <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
+                    <label class="text-sm mr-2">color</label>
+                    <input type="color" x-model.throttle.900ms="color" class="input input-sm input-primary input-bordered w-full" />
+                  </div>
+                  <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
+                    <label class="text-sm mr-2">poster</label>
+                    <input type="text" x-model="poster" class="input input-sm input-primary input-bordered w-full" />
+                  </div>
                   <label class="label cursor-pointer bg-base-200 rounded-sm px-2">
-                    <span class="label-text">dark</span>
-                    <input type="checkbox" :checked="dark" class="checkbox checkbox-primary" x-on:click="dark = !dark"/>
+                    <span class="label-text">control</span>
+                    <input type="checkbox" :checked="control" class="checkbox checkbox-primary" x-on:click="control = !control"/>
+                  </label>
+                  <label class="label cursor-pointer bg-base-200 rounded-sm px-2">
+                    <span class="label-text">autoPlay</span>
+                    <input type="checkbox" :checked="autoPlay" class="checkbox checkbox-primary" x-on:click="autoPlay = !autoPlay"/>
+                  </label>
+                  <label class="label cursor-pointer bg-base-200 rounded-sm px-2">
+                    <span class="label-text">mute</span>
+                    <input type="checkbox" :checked="mute" class="checkbox checkbox-primary" x-on:click="mute = !mute"/>
+                  </label>
+                  <label class="label cursor-pointer bg-base-200 rounded-sm px-2">
+                    <span class="label-text">loops</span>
+                    <input type="checkbox" :checked="loops" class="checkbox checkbox-primary" x-on:click="loops = !loops"/>
                   </label>
                   <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
                     <label class="text-sm mr-2">width ratio</label>
@@ -180,43 +203,11 @@
                     <label class="text-sm mr-2">height ratio</label>
                     <input type="number" min="1" x-model="heightRatio" class="input input-sm input-primary input-bordered w-full" />
                   </div>
-                  <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
-                    <label class="text-sm mr-2">border color</label>
-                    <input type="color" x-model="borderColor" class="input input-sm input-primary input-bordered w-full" />
-                  </div>
-                  <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
-                    <label class="text-sm mr-2">position</label>
-                    <select x-model="position" class="select select-sm select-primary flex-1 max-w-full">
-                        <option>center</option>
-                        <option>right</option>
-                        <option>left</option>
-                    </select>
-                  </div>
-                  <label class="label cursor-pointer bg-base-200 rounded-sm px-2">
-                    <span class="label-text">camera</span>
-                    <input type="checkbox" :checked="camera" class="checkbox checkbox-primary" x-on:click="camera = !camera"/>
-                  </label>
-                  <label class="label cursor-pointer bg-base-200 rounded-sm px-2">
-                    <span class="label-text">camera extra</span>
-                    <input type="checkbox" :checked="cameraExtra" class="checkbox checkbox-primary" x-on:click="cameraExtra = !cameraExtra"/>
-                  </label>
-                  <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
-                    <label class="text-sm mr-2">camera size</label>
-                    <input type="number" min="1" x-model="cameraSize" class="input input-sm input-primary input-bordered w-full" />
-                  </div>
-                  <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
-                    <label class="text-sm mr-2">camera extraSize</label>
-                    <input type="number" min="1" x-model="cameraExtraSize" class="input input-sm input-primary input-bordered w-full" />
-                  </div>
-                  <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
-                    <label class="text-sm mr-2">camera top</label>
-                    <input type="number" min="1" x-model="cameraTop" class="input input-sm input-primary input-bordered w-full" />
-                  </div>
                 </div>
               </div>
               <div class="mt-6">
                 <div class="font-semibold">Import into HTML (Include it in your html)</div>
-                <code-markup data='<script type="module" src="https://miniwidget.com/modules/emulator-box.js"></script>' />
+                <code-markup data='<script type="module" src="https://miniwidget.com/modules/player-box.js"></script>' />
               </div>
               <div>
                 <div class="font-semibold">Usage</div>
