@@ -4,20 +4,41 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="shortcut icon" type="image/x-icon" href="/static/img/favicon.ico" />
+  <link rel="shortcut icon" type="image/svg+xml" href="/imgs/logo.ico" />
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Mini Widget | The best image zoom box hover components for web">
+  <meta property="og:description" content="Image Zoom Box Hover Widget ! It has many choices and easy customization with light/dark theme support">
+  <meta property="og:image" content="https://miniwidget.com/imgs/logo.svg">
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="Mini Widget | The best image zoom box hover components for web">
+  <meta property="twitter:description" content="Image Zoom Box Hover Widget ! It has many choices and easy customization with light/dark theme support">
+  <meta property="twitter:image" content="https://miniwidget.com/imgs/logo.svg">
   <meta name="author" content="kimthiendung@gmail.com">
-  <meta name="keywords" content="">
-  <meta name="description" content="">
-  <title></title>
+  <meta name="keywords" content="image zoom box hover, image effect components, custom element, web component, web module, free components">
+  <meta name="description" content="Image Zoom Box Hover Widget ! It has many choices and easy customization with light/dark theme support">
+  <title>Mini Widget | The best image zoom box hover components for web</title>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NPQTJJ2');</script>
+  <!-- End Google Tag Manager -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7138616487261351" crossorigin="anonymous"></script>
   <script type="module" crossorigin src="/static/common/apexcharts.1ffe166b.js"></script>
+  <script type="module" crossorigin src="/static/common/plugins.js.0e662e58.js"></script>
+  <script type="module" crossorigin src="/static/common/highlight.js.f3015274.js"></script>
   <script type="module" crossorigin src="/static/common/plyr.ea0f65b7.js"></script>
-  <script type="module" crossorigin src="/static/common/main.150dd61d.js"></script>
-  <link rel="stylesheet" href="/static/common/main.1bd0aa66.css">
+  <script type="module" crossorigin src="/static/common/keen-slider.014b2aed.js"></script>
+  <script type="module" crossorigin src="/static/common/main.29af8f9b.js"></script>
+  <link rel="stylesheet" href="/static/common/main.968d4020.css">
+  <link rel="stylesheet" href="/static/common/highlight.eac0d35b.css">
   <link rel="stylesheet" href="/static/common/plyr.f7ca2171.css">
+  <link rel="stylesheet" href="/static/common/keen-slider.32ce0960.css">
 </head>
 
 <body x-data="_stt">
-  <div class="w-screen h-screen flex justify-center items-center" x-show="$store.hub.loading" x-cloak>
+  <div class="w-screen h-screen flex justify-center items-center bg-neutral-content" :data-theme="[$store.hub.dark ? 'dark': 'light']" x-show="$store.hub.loading" x-cloak>
     <img src="/imgs/loading-200.svg">
   </div>
   <div x-show="!$store.hub.loading" style="display: none;" x-cloak>
@@ -26,7 +47,7 @@
         <div class="flex-none w-full p-3">
           <div class="flex items-center justify-between">
             <div class="flex items-center text-xl font-semibold">
-              <a href="#" class="flex items-center"><img class="h-10 mr-2" src="/imgs/logo.svg" /> Infinify</a>
+              <a href="/" class="flex items-center"><img class="h-10 mr-2" src="/imgs/logo.svg" /> Mini Widget</a>
               <button class="ml-2 btn btn-circle btn-ghost" @click="$store.hub.darkToggle()">
                 <svg x-cloak x-show="!$store.hub.dark" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
@@ -40,6 +61,7 @@
               <div>
                 <time-digital :dark='$store.hub.dark' :background='$store.hub.dark ? "#1f242d" : "#edeff2"' size='24' font='monospace' rounded='24' shadow='false' />
               </div>
+              <!--
               <div class="ml-3">
                 <button class="btn btn-circle btn-ghost">
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
@@ -53,6 +75,7 @@
                   </div>
                 </button>
               </div>
+              -->
             </div>
           </div>        </div>
         <div class="flex-1 lg:flex px-3 overflow-hidden">
@@ -63,7 +86,7 @@
                 Charts
               </span>
             </a>
-            <a href="/times.html" :class="$store.hub.navbar === '/times.html' && 'outline outline-white'" class="relative flex h-30 mb-3 overflow-hidden cursor-pointer rounded-box group">
+            <a href="/time.html" :class="$store.hub.navbar === '/time.html' && 'outline outline-white'" class="relative flex h-30 mb-3 overflow-hidden cursor-pointer rounded-box group">
               <img class="w-full object-cover transform duration-300 group-hover:scale-110" src="/imgs/time.png" />
               <span class="absolute w-full h-full flex items-end text-white text-opacity-70 sm:text-xl uppercase p-3 bg-gradient-to-t from-purple-500 to-transparent">
                 Time
@@ -81,6 +104,18 @@
                 Sliders
               </span>
             </a>
+            <a href="/images.html" :class="$store.hub.navbar === '/sliders.html' && 'outline outline-white'" class="relative flex h-30 mb-3 overflow-hidden cursor-pointer rounded-box group">
+              <img class="w-full object-cover transform duration-300 group-hover:scale-110" src="/imgs/image-zoom-hover.jpg" />
+              <span class="absolute w-full h-full flex items-end text-white text-opacity-70 sm:text-xl uppercase p-3 bg-gradient-to-t from-pink-500 to-transparent">
+                Images
+              </span>
+            </a>
+            <a href="/emulators.html" :class="$store.hub.navbar === '/sliders.html' && 'outline outline-white'" class="relative flex h-30 mb-3 overflow-hidden cursor-pointer rounded-box group">
+              <img class="w-full object-cover transform duration-300 group-hover:scale-110" src="/imgs/phone.jpeg" />
+              <span class="absolute w-full h-full flex items-end text-white text-opacity-70 sm:text-xl uppercase p-3 bg-gradient-to-t from-orange-500 to-transparent">
+                Emulators
+              </span>
+            </a>
             <a href="/coming-soon.html" :class="$store.hub.navbar === '/coming-soon.html' && 'outline outline-white'" class="relative flex h-30 mb-3 overflow-hidden cursor-pointer rounded-box group">
               <img class="w-full object-cover transform duration-300 group-hover:scale-110" src="/imgs/weather.png" />
               <span class="absolute w-full h-full flex items-end text-white text-opacity-70 sm:text-xl uppercase p-3 bg-gradient-to-t from-yellow-500 to-transparent">
@@ -90,41 +125,43 @@
           </div>          <!-- Main -->
           <div id="main" class="flex-1 overflow-auto rounded-box bg-base-100 p-4 divide-y divide-base-100" x-bind="_stt_main">
             
+            <h1 class="text-2xl font-semibold mb-3 capitalize" title="image zoom box hover">
+              image zoom box hover
+              <span class="flex w-12 border-b-4 border-primary"></span>
+            </h1>
             <div x-data="{
-              dark: true,
-              mode: 'snap',
-              vertical: true,
-              controlMiddle: true,
-              control: true,
-              perView: 1,
-              spacing: 0,
-              origin: 'auto',
-              dot: false,
-              loops: false,
-              autoPlay: false,
-              lazyLoad: false,
-              effect: '',
-              items: '[]',
+              src: '/imgs/dark.jpg',
+              srcOrigin: '/imgs/dark.jpg',
+              rounded: 0,
               tag () {
-                return `<slider-box 
-                          dark='${this.dark}'
-                          />`
+                return `<img-zoom-box-hover src='${this.src}' src='${this.srcOrigin}' rounded='${this.rounded}' />`
               }
             }">
               <div class="md:flex">
-                <div class="flex-none md:w-96 md:mr-3 mb-3">
-                  <slider-box :dark="dark"/>
+                <div class="flex-1 md:mr-3 mb-3">
+                  <img-zoom-box-hover 
+                  :src="src"
+                  :src-origin="srcOrigin"
+                  :rounded="rounded" />
                 </div>
-                <div class="flex-1 max-w-full md:grid md:grid-cols-2 xl:grid-cols-3 auto-rows-max gap-3 capitalize">
-                  <label class="label cursor-pointer bg-base-200 rounded-sm px-2">
-                    <span class="label-text">dark</span>
-                    <input type="checkbox" :checked="dark" class="checkbox checkbox-primary" x-on:click="dark = !dark"/>
-                  </label>
+                <div class="flex-none md:w-96 max-w-full md:grid grid-cols-1 auto-rows-max gap-3 capitalize">
+                  <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
+                    <label class="text-sm mr-2">source</label>
+                    <input type="text" x-model.debounce.500ms="src" class="input input-sm input-primary input-bordered w-full" />
+                  </div>
+                  <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
+                    <label class="text-sm mr-2">source origin</label>
+                    <input type="text" x-model.debounce.500ms="srcOrigin" class="input input-sm input-primary input-bordered w-full" />
+                  </div>
+                  <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
+                    <label class="text-sm mr-2">rounded</label>
+                    <input type="number" min="0" x-model="rounded" class="input input-sm input-primary input-bordered w-full" />
+                  </div>
                 </div>
               </div>
               <div class="mt-6">
                 <div class="font-semibold">Import into HTML (Include it in your html)</div>
-                <code-markup data='<script src="dest/modules/slider-box.js"></script>' />
+                <code-markup data='<script type="module" src="https://miniwidget.com/modules/img-zoom-box-hover.js"></script>' />
               </div>
               <div>
                 <div class="font-semibold">Usage</div>
@@ -145,6 +182,19 @@
   </div>
   
   
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NPQTJJ2"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
+  <script>
+    kofiWidgetOverlay.draw('kimthiendung', {
+      'type': 'floating-chat',
+      'floating-chat.donateButton.text': 'Donate',
+      'floating-chat.donateButton.background-color': '#fcbf47',
+      'floating-chat.donateButton.text-color': '#323842'
+    });
+  </script>
 </body>
 
 </html>

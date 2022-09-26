@@ -6,17 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="shortcut icon" type="image/svg+xml" href="/imgs/logo.ico" />
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Mini Widget | The best calendar components for web">
-  <meta property="og:description" content="Calendar Widget ! It has many choices and easy customization with light/dark theme support">
+  <meta property="og:title" content="Mini Widget | The best image zoom hover components for web">
+  <meta property="og:description" content="Image Zoom Hover Widget ! It has many choices and easy customization with light/dark theme support">
   <meta property="og:image" content="https://miniwidget.com/imgs/logo.svg">
   <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:title" content="Mini Widget | The best calendar components for web">
-  <meta property="twitter:description" content="Calendar Widget ! It has many choices and easy customization with light/dark theme support">
+  <meta property="twitter:title" content="Mini Widget | The best image zoom hover components for web">
+  <meta property="twitter:description" content="Image Zoom Hover Widget ! It has many choices and easy customization with light/dark theme support">
   <meta property="twitter:image" content="https://miniwidget.com/imgs/logo.svg">
   <meta name="author" content="kimthiendung@gmail.com">
-  <meta name="keywords" content="calendar components, custom element, web component, web module, free components">
-  <meta name="description" content="Calendar Widget ! It has many choices and easy customization with light/dark theme support">
-  <title>Mini Widget | The best calendar components for web</title>
+  <meta name="keywords" content="image zoom hover, image effect components, custom element, web component, web module, free components">
+  <meta name="description" content="Image Zoom Hover Widget ! It has many choices and easy customization with light/dark theme support">
+  <title>Mini Widget | The best image zoom hover components for web</title>
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -125,87 +125,53 @@
           </div>          <!-- Main -->
           <div id="main" class="flex-1 overflow-auto rounded-box bg-base-100 p-4 divide-y divide-base-100" x-bind="_stt_main">
             
-            <div>
-              <h1 class="text-2xl font-semibold mb-3 capitalize" title="calendar components">
-                calendar components
-                <span class="flex w-12 border-b-4 border-primary"></span>
-              </h1>
+            <h1 class="text-2xl font-semibold mb-3 capitalize" title="image zoom hover">
+              image zoom hover
+              <span class="flex w-12 border-b-4 border-primary"></span>
+            </h1>
+            <div x-data="{
+              src: '/imgs/light.jpg',
+              srcOrigin: '/imgs/light.jpg',
+              rounded: 0,
+              size: 360,
+              tag () {
+                return `<img-zoom-hover src='${this.src}' src='${this.srcOrigin}' rounded='${this.rounded}' size='${this.size}' />`
+              }
+            }">
               <div class="md:flex">
-                <div class="flex-none md:w-96 md:mr-3 mb-3">
-                  <time-calendar 
-                  :dark="$store.calendar.dark"
-                  :color="$store.calendar.color"
-                  :max-width="$store.calendar.maxWidth"
-                  :font="$store.calendar.font"
-                  :rounded="$store.calendar.rounded"
-                  :lunar="$store.calendar.lunar"
-                  :days="$store.calendar.days"
-                  :months="$store.calendar.months" />
+                <div class="flex-1 md:mr-3 mb-3">
+                  <img-zoom-hover 
+                  :src="src"
+                  :src-origin="srcOrigin"
+                  :rounded="rounded"
+                  :size="size" />
                 </div>
-                <div class="flex-1 max-w-full md:grid md:grid-cols-2 xl:grid-cols-3 auto-rows-max gap-3 capitalize">
-                  <label class="label cursor-pointer bg-base-200 rounded-sm px-2">
-                    <span class="label-text">dark</span>
-                    <input type="checkbox" :checked="$store.calendar.dark" class="checkbox checkbox-primary" x-on:click="$store.calendar.dark = !$store.calendar.dark"/>
-                  </label>
+                <div class="flex-none md:w-96 max-w-full md:grid grid-cols-1 auto-rows-max gap-3 capitalize">
                   <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
-                    <label class="text-sm mr-2">color</label>
-                    <input type="color" x-model="$store.calendar.color" class="input input-sm input-primary input-bordered w-full" />
+                    <label class="text-sm mr-2">source</label>
+                    <input type="text" x-model.debounce.500ms="src" class="input input-sm input-primary input-bordered w-full" />
                   </div>
                   <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
-                    <label class="text-sm mr-2">max width</label>
-                    <input type="number" min="1" x-model="$store.calendar.maxWidth" class="input input-sm input-primary input-bordered w-full" />
-                  </div>
-                  <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
-                    <label class="text-sm mr-2">font</label>
-                    <input type="text" x-model="$store.calendar.font" class="input input-sm input-primary input-bordered w-full" />
+                    <label class="text-sm mr-2">source origin</label>
+                    <input type="text" x-model.debounce.500ms="srcOrigin" class="input input-sm input-primary input-bordered w-full" />
                   </div>
                   <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
                     <label class="text-sm mr-2">rounded</label>
-                    <input type="number" min="0" x-model="$store.calendar.rounded" class="input input-sm input-primary input-bordered w-full" />
+                    <input type="number" min="0" x-model="rounded" class="input input-sm input-primary input-bordered w-full" />
                   </div>
-                  <label class="label cursor-pointer bg-base-200 rounded-sm px-2">
-                    <span class="label-text">lunar</span>
-                    <input type="checkbox" :checked="$store.calendar.lunar" class="checkbox checkbox-primary" x-on:click="$store.calendar.lunar = !$store.calendar.lunar"/>
-                  </label>
-                  <div class="md:col-span-2 xl:col-span-3 flex items-center bg-base-200 rounded-sm py-1 px-2">
-                    <label class="text-sm mr-2">days
-                      <div class="flex items-center">
-                        <button class="btn btn-xs btn-outline btn-primary" @click="copy($store.calendar.days)">copy</button>
-                        <div class="tooltip tooltip-right" data-tip="It's array refer to https://jsonformatter.org/">
-                          <a href="https://jsonformatter.org/" target="_blank" class="pl-1 btn btn-xs btn-circle btn-link">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                              <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
-                            </svg>            
-                          </a>
-                        </div>
-                      </div>
-                    </label>
-                    <textarea type="text" x-model="$store.calendar.days" class="textarea textarea-primary textarea-bordered w-full"></textarea>
-                  </div>
-                  <div class="md:col-span-2 xl:col-span-3 flex items-center bg-base-200 rounded-sm py-1 px-2">
-                    <label class="text-sm mr-2">months
-                      <div class="flex items-center">
-                        <button class="btn btn-xs btn-outline btn-primary" @click="copy($store.calendar.months)">copy</button>
-                        <div class="tooltip tooltip-right" data-tip="It's array refer to https://jsonformatter.org/">
-                          <a href="https://jsonformatter.org/" target="_blank" class="pl-1 btn btn-xs btn-circle btn-link">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                              <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
-                            </svg>            
-                          </a>
-                        </div>
-                      </div>
-                    </label>
-                    <textarea type="text" x-model="$store.calendar.months" class="textarea textarea-primary textarea-bordered w-full"></textarea>
+                  <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
+                    <label class="text-sm mr-2">size</label>
+                    <input type="number" min="0" x-model="size" class="input input-sm input-primary input-bordered w-full" />
                   </div>
                 </div>
               </div>
               <div class="mt-6">
                 <div class="font-semibold">Import into HTML (Include it in your html)</div>
-                <code-markup data='<script type="module" src="https://miniwidget.com/modules/time-calendar.js"></script>' />
+                <code-markup data='<script type="module" src="https://miniwidget.com/modules/img-zoom-hover.js"></script>' />
               </div>
               <div>
                 <div class="font-semibold">Usage</div>
-                <code-markup :data="$store.calendar.tag()" />
+                <code-markup :data="tag()" />
               </div>
             </div>
             
