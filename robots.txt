@@ -1,3 +1,7 @@
-Sitemap: https://guzuzu.com/sitemap.xml
+User-agent: Googlebot
+Disallow: /nogooglebot/
+
 User-agent: *
-Disallow:
+Allow: /
+
+Sitemap: https://miniwidget.com/sitemap.xml
