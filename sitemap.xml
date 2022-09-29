@@ -9,357 +9,377 @@
 
 <url>
   <loc>https://miniwidget.com/</loc>
-  <lastmod>2022-09-26T15:18:12+00:00</lastmod>
+  <lastmod>2022-09-29T14:55:10+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://miniwidget.com/charts.html</loc>
-  <lastmod>2022-09-26T15:18:12+00:00</lastmod>
+  <lastmod>2022-09-29T14:55:09+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://miniwidget.com/time.html</loc>
-  <lastmod>2022-09-26T15:18:12+00:00</lastmod>
+  <lastmod>2022-09-29T14:55:10+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://miniwidget.com/players.html</loc>
-  <lastmod>2022-09-26T15:18:12+00:00</lastmod>
+  <lastmod>2022-09-29T14:55:10+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://miniwidget.com/sliders.html</loc>
-  <lastmod>2022-09-26T15:18:12+00:00</lastmod>
+  <lastmod>2022-09-29T14:55:10+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://miniwidget.com/images.html</loc>
-  <lastmod>2022-09-26T15:18:12+00:00</lastmod>
+  <lastmod>2022-09-29T14:55:09+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://miniwidget.com/emulators.html</loc>
-  <lastmod>2022-09-26T15:18:12+00:00</lastmod>
+  <lastmod>2022-09-29T14:55:09+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://miniwidget.com/coming-soon.html</loc>
-  <lastmod>2022-09-26T15:18:12+00:00</lastmod>
+  <lastmod>2022-09-29T14:55:09+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://miniwidget.com/spark-area-chart.html</loc>
-  <lastmod>2022-09-26T15:18:12+00:00</lastmod>
+  <lastmod>2022-09-29T14:55:10+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://miniwidget.com/spark-bar-chart.html</loc>
-  <lastmod>2022-09-26T15:18:12+00:00</lastmod>
+  <lastmod>2022-09-29T14:55:10+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://miniwidget.com/line-chart.html</loc>
-  <lastmod>2022-09-26T15:18:12+00:00</lastmod>
+  <lastmod>2022-09-29T14:55:10+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://miniwidget.com/line-multi-chart.html</loc>
-  <lastmod>2022-09-26T15:18:12+00:00</lastmod>
+  <lastmod>2022-09-29T14:55:10+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://miniwidget.com/line-stepline-chart.html</loc>
-  <lastmod>2022-09-26T15:18:12+00:00</lastmod>
+  <lastmod>2022-09-29T14:55:10+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://miniwidget.com/area-chart.html</loc>
-  <lastmod>2022-09-26T15:18:12+00:00</lastmod>
+  <lastmod>2022-09-29T14:55:09+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://miniwidget.com/area-multi-chart.html</loc>
-  <lastmod>2022-09-26T15:18:12+00:00</lastmod>
+  <lastmod>2022-09-29T14:55:09+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://miniwidget.com/area-stepline-chart.html</loc>
-  <lastmod>2022-09-26T15:18:12+00:00</lastmod>
+  <lastmod>2022-09-29T14:55:09+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://miniwidget.com/area-multi-stacked-chart.html</loc>
-  <lastmod>2022-09-26T15:18:12+00:00</lastmod>
+  <lastmod>2022-09-29T14:55:09+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://miniwidget.com/area-null-values-chart.html</loc>
-  <lastmod>2022-09-26T15:18:12+00:00</lastmod>
+  <lastmod>2022-09-29T14:55:09+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://miniwidget.com/bar-chart.html</loc>
-  <lastmod>2022-09-26T15:18:12+00:00</lastmod>
+  <lastmod>2022-09-29T14:55:09+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://miniwidget.com/bar-horizontal-chart.html</loc>
-  <lastmod>2022-09-26T15:18:12+00:00</lastmod>
+  <lastmod>2022-09-29T14:55:09+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://miniwidget.com/bar-group-chart.html</loc>
-  <lastmod>2022-09-26T15:18:12+00:00</lastmod>
+  <lastmod>2022-09-29T14:55:09+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://miniwidget.com/bar-group-horizontal-chart.html</loc>
-  <lastmod>2022-09-26T15:18:12+00:00</lastmod>
+  <lastmod>2022-09-29T14:55:09+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://miniwidget.com/bar-postive-negative-chart.html</loc>
-  <lastmod>2022-09-26T15:18:12+00:00</lastmod>
+  <lastmod>2022-09-29T14:55:09+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://miniwidget.com/bar-postive-negative-custom-chart.html</loc>
-  <lastmod>2022-09-26T15:18:12+00:00</lastmod>
+  <lastmod>2022-09-29T14:55:09+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://miniwidget.com/bar-stacked-chart.html</loc>
-  <lastmod>2022-09-26T15:18:12+00:00</lastmod>
+  <lastmod>2022-09-29T14:55:09+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://miniwidget.com/bar-stacked-100-chart.html</loc>
-  <lastmod>2022-09-26T15:18:12+00:00</lastmod>
+  <lastmod>2022-09-29T14:55:09+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://miniwidget.com/bar-stacked-horizontal-chart.html</loc>
-  <lastmod>2022-09-26T15:18:12+00:00</lastmod>
+  <lastmod>2022-09-29T14:55:09+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://miniwidget.com/bar-stacked-horizontal-100-chart.html</loc>
-  <lastmod>2022-09-26T15:18:12+00:00</lastmod>
+  <lastmod>2022-09-29T14:55:09+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://miniwidget.com/mixed-chart.html</loc>
-  <lastmod>2022-09-26T15:18:12+00:00</lastmod>
+  <lastmod>2022-09-29T14:55:10+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://miniwidget.com/mixed-line-area-chart.html</loc>
-  <lastmod>2022-09-26T15:18:12+00:00</lastmod>
+  <lastmod>2022-09-29T14:55:10+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://miniwidget.com/mixed-line-bar-chart.html</loc>
-  <lastmod>2022-09-26T15:18:12+00:00</lastmod>
+  <lastmod>2022-09-29T14:55:10+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://miniwidget.com/mixed-multi-yaxis-chart.html</loc>
-  <lastmod>2022-09-26T15:18:12+00:00</lastmod>
+  <lastmod>2022-09-29T14:55:10+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://miniwidget.com/pie-chart.html</loc>
-  <lastmod>2022-09-26T15:18:12+00:00</lastmod>
+  <lastmod>2022-09-29T14:55:10+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://miniwidget.com/pie-monochrome-chart.html</loc>
-  <lastmod>2022-09-26T15:18:12+00:00</lastmod>
+  <lastmod>2022-09-29T14:55:10+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://miniwidget.com/pie-donut-chart.html</loc>
-  <lastmod>2022-09-26T15:18:12+00:00</lastmod>
+  <lastmod>2022-09-29T14:55:10+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://miniwidget.com/pie-donut-monochrome-chart.html</loc>
-  <lastmod>2022-09-26T15:18:12+00:00</lastmod>
+  <lastmod>2022-09-29T14:55:10+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://miniwidget.com/polar-chart.html</loc>
-  <lastmod>2022-09-26T15:18:12+00:00</lastmod>
+  <lastmod>2022-09-29T14:55:10+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://miniwidget.com/polar-monochrome-chart.html</loc>
-  <lastmod>2022-09-26T15:18:12+00:00</lastmod>
+  <lastmod>2022-09-29T14:55:10+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://miniwidget.com/radial-bar-chart.html</loc>
-  <lastmod>2022-09-26T15:18:12+00:00</lastmod>
+  <lastmod>2022-09-29T14:55:10+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://miniwidget.com/radial-bar-multi-chart.html</loc>
-  <lastmod>2022-09-26T15:18:12+00:00</lastmod>
+  <lastmod>2022-09-29T14:55:10+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://miniwidget.com/radial-bar-monochrome-chart.html</loc>
-  <lastmod>2022-09-26T15:18:12+00:00</lastmod>
+  <lastmod>2022-09-29T14:55:10+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://miniwidget.com/radial-bar-gauge-chart.html</loc>
-  <lastmod>2022-09-26T15:18:12+00:00</lastmod>
+  <lastmod>2022-09-29T14:55:10+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://miniwidget.com/radial-bar-gauge-semi-chart.html</loc>
-  <lastmod>2022-09-26T15:18:12+00:00</lastmod>
+  <lastmod>2022-09-29T14:55:10+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://miniwidget.com/radial-bar-custom-chart.html</loc>
-  <lastmod>2022-09-26T15:18:12+00:00</lastmod>
+  <lastmod>2022-09-29T14:55:10+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://miniwidget.com/radar-chart.html</loc>
-  <lastmod>2022-09-26T15:18:12+00:00</lastmod>
+  <lastmod>2022-09-29T14:55:10+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://miniwidget.com/radar-multi-chart.html</loc>
-  <lastmod>2022-09-26T15:18:12+00:00</lastmod>
+  <lastmod>2022-09-29T14:55:10+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://miniwidget.com/radar-polygon-chart.html</loc>
-  <lastmod>2022-09-26T15:18:12+00:00</lastmod>
+  <lastmod>2022-09-29T14:55:10+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://miniwidget.com/time-digital.html</loc>
-  <lastmod>2022-09-26T15:18:12+00:00</lastmod>
+  <lastmod>2022-09-29T14:55:10+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://miniwidget.com/time-digital-box.html</loc>
-  <lastmod>2022-09-26T15:18:12+00:00</lastmod>
+  <lastmod>2022-09-29T14:55:10+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://miniwidget.com/time-clock.html</loc>
-  <lastmod>2022-09-26T15:18:12+00:00</lastmod>
+  <lastmod>2022-09-29T14:55:10+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://miniwidget.com/time-calendar.html</loc>
-  <lastmod>2022-09-26T15:18:12+00:00</lastmod>
+  <lastmod>2022-09-29T14:55:10+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://miniwidget.com/player-video.html</loc>
-  <lastmod>2022-09-26T15:18:12+00:00</lastmod>
+  <lastmod>2022-09-29T14:55:10+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://miniwidget.com/player-audio.html</loc>
-  <lastmod>2022-09-26T15:18:12+00:00</lastmod>
+  <lastmod>2022-09-29T14:55:10+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://miniwidget.com/player-vertical.html</loc>
-  <lastmod>2022-09-26T15:18:12+00:00</lastmod>
+  <lastmod>2022-09-29T14:55:10+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://miniwidget.com/player-youtube.html</loc>
-  <lastmod>2022-09-26T15:18:12+00:00</lastmod>
+  <lastmod>2022-09-29T14:55:10+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://miniwidget.com/player-vimeo.html</loc>
-  <lastmod>2022-09-26T15:18:12+00:00</lastmod>
+  <lastmod>2022-09-29T14:55:10+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://miniwidget.com/player-video-ads-preroll.html</loc>
-  <lastmod>2022-09-26T15:18:12+00:00</lastmod>
+  <lastmod>2022-09-29T14:55:10+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://miniwidget.com/slider-box.html</loc>
-  <lastmod>2022-09-26T15:18:12+00:00</lastmod>
+  <lastmod>2022-09-29T14:55:10+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://miniwidget.com/slider-custom-slot.html</loc>
-  <lastmod>2022-09-26T15:18:12+00:00</lastmod>
+  <lastmod>2022-09-29T14:55:10+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://miniwidget.com/slider-lazyload.html</loc>
-  <lastmod>2022-09-26T15:18:12+00:00</lastmod>
+  <lastmod>2022-09-29T14:55:10+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://miniwidget.com/slider-effect-fade.html</loc>
-  <lastmod>2022-09-26T15:18:12+00:00</lastmod>
+  <lastmod>2022-09-29T14:55:10+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://miniwidget.com/slider-effect-zoom.html</loc>
-  <lastmod>2022-09-26T15:18:12+00:00</lastmod>
+  <lastmod>2022-09-29T14:55:10+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://miniwidget.com/slider-carousel.html</loc>
-  <lastmod>2022-09-26T15:18:12+00:00</lastmod>
+  <lastmod>2022-09-29T14:55:10+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://miniwidget.com/slider-carousel-vertical.html</loc>
-  <lastmod>2022-09-26T15:18:12+00:00</lastmod>
+  <lastmod>2022-09-29T14:55:10+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://miniwidget.com/slider-carousel-center-free-snap.html</loc>
-  <lastmod>2022-09-26T15:18:12+00:00</lastmod>
+  <lastmod>2022-09-29T14:55:10+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://miniwidget.com/slider-carousel-free-mode.html</loc>
-  <lastmod>2022-09-26T15:18:12+00:00</lastmod>
+  <lastmod>2022-09-29T14:55:10+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://miniwidget.com/image-compare.html</loc>
+  <lastmod>2022-09-29T14:55:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://miniwidget.com/image-compare-vertical.html</loc>
+  <lastmod>2022-09-29T14:55:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://miniwidget.com/image-zoom.html</loc>
+  <lastmod>2022-09-29T14:55:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://miniwidget.com/image-zoom-inline.html</loc>
+  <lastmod>2022-09-29T14:55:09+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://miniwidget.com/image-zoom-hover.html</loc>
-  <lastmod>2022-09-26T15:18:12+00:00</lastmod>
+  <lastmod>2022-09-29T14:55:09+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://miniwidget.com/image-zoom-box-hover.html</loc>
-  <lastmod>2022-09-26T15:18:12+00:00</lastmod>
+  <lastmod>2022-09-29T14:55:09+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://miniwidget.com/emulator-box.html</loc>
-  <lastmod>2022-09-26T15:18:12+00:00</lastmod>
+  <lastmod>2022-09-29T14:55:09+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://miniwidget.com/emulator-iframe.html</loc>
-  <lastmod>2022-09-26T15:18:12+00:00</lastmod>
+  <lastmod>2022-09-29T14:55:09+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://miniwidget.com/emulator-horizontal.html</loc>
-  <lastmod>2022-09-26T15:18:12+00:00</lastmod>
+  <lastmod>2022-09-29T14:55:09+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 
