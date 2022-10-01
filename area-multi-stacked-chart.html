@@ -28,16 +28,16 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7138616487261351" crossorigin="anonymous"></script>
   <script type="module" crossorigin src="/static/common/apexcharts.1ffe166b.js"></script>
   <script type="module" crossorigin src="/static/common/plugins.js.e2b93dd0.js"></script>
-  <script type="module" crossorigin src="/static/common/charts.js.155ebfb3.js"></script>
+  <script type="module" crossorigin src="/static/common/charts.js.562fa082.js"></script>
   <script type="module" crossorigin src="/static/common/highlight.js.f3015274.js"></script>
   <script type="module" crossorigin src="/static/common/plyr.ea0f65b7.js"></script>
   <script type="module" crossorigin src="/static/common/keen-slider.014b2aed.js"></script>
-  <script type="module" crossorigin src="/static/common/main.2a8e94ea.js"></script>
+  <script type="module" crossorigin src="/static/common/main.75af47b4.js"></script>
+  <link rel="stylesheet" href="/static/common/main.ec44642f.css">
   <link rel="stylesheet" href="/static/common/plugins.af5de7ef.css">
   <link rel="stylesheet" href="/static/common/highlight.eac0d35b.css">
   <link rel="stylesheet" href="/static/common/plyr.f7ca2171.css">
   <link rel="stylesheet" href="/static/common/keen-slider.32ce0960.css">
-  <link rel="stylesheet" href="/static/common/main.f8f0f6e6.css">
 </head>
 
 <body x-data="_stt" :data-theme="[$store.hub.dark ? 'dark': 'light']">
@@ -78,44 +78,44 @@
           </div>
         </div>      </div>
       <div class="flex-1 lg:flex px-3 overflow-hidden">
-        <div class="gap-3 grid grid-flow-row grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:block lg:w-40 p-1 mr-2 overflow-auto">
-          <a href="/charts.html" :class="$store.hub.navbar === '/charts.html' && 'outline outline-white'" class="relative flex h-30 mb-3 overflow-hidden cursor-pointer rounded-box group">
+        <div class="gap-3 flex flex-nowrap lg:block lg:w-40 p-1 mr-2 overflow-auto">
+          <a href="/charts.html" :class="$store.hub.navbar === '/charts.html' && 'outline outline-white'" class="relative flex flex-none w-2/5 md:w-1/5 lg:w-full h-30 mb-3 overflow-hidden cursor-pointer rounded-box group">
             <img class="w-full object-cover transform duration-300 group-hover:scale-110" src="/imgs/charts.png" />
             <span class="absolute w-full h-full flex items-end text-white text-opacity-70 sm:text-xl uppercase p-3 bg-gradient-to-t from-green-500 to-transparent">
               Charts
             </span>
           </a>
-          <a href="/time.html" :class="$store.hub.navbar === '/time.html' && 'outline outline-white'" class="relative flex h-30 mb-3 overflow-hidden cursor-pointer rounded-box group">
+          <a href="/time.html" :class="$store.hub.navbar === '/time.html' && 'outline outline-white'" class="relative flex flex-none w-2/5 md:w-1/5 lg:w-full h-30 mb-3 overflow-hidden cursor-pointer rounded-box group">
             <img class="w-full object-cover transform duration-300 group-hover:scale-110" src="/imgs/time.png" />
             <span class="absolute w-full h-full flex items-end text-white text-opacity-70 sm:text-xl uppercase p-3 bg-gradient-to-t from-purple-500 to-transparent">
               Time
             </span>
           </a>
-          <a href="/players.html" :class="$store.hub.navbar === '/players.html' && 'outline outline-white'" class="relative flex h-30 mb-3 overflow-hidden cursor-pointer rounded-box group">
+          <a href="/players.html" :class="$store.hub.navbar === '/players.html' && 'outline outline-white'" class="relative flex flex-none w-2/5 md:w-1/5 lg:w-full h-30 mb-3 overflow-hidden cursor-pointer rounded-box group">
             <img class="w-full object-cover transform duration-300 group-hover:scale-110" src="/imgs/players.png" />
             <span class="absolute w-full h-full flex items-end text-white text-opacity-70 sm:text-xl uppercase p-3 bg-gradient-to-t from-blue-500 to-transparent">
               Players
             </span>
           </a>
-          <a href="/sliders.html" :class="$store.hub.navbar === '/sliders.html' && 'outline outline-white'" class="relative flex h-30 mb-3 overflow-hidden cursor-pointer rounded-box group">
+          <a href="/sliders.html" :class="$store.hub.navbar === '/sliders.html' && 'outline outline-white'" class="relative flex flex-none w-2/5 md:w-1/5 lg:w-full h-30 mb-3 overflow-hidden cursor-pointer rounded-box group">
             <img class="w-full object-cover transform duration-300 group-hover:scale-110" src="/imgs/carousels.png" />
             <span class="absolute w-full h-full flex items-end text-white text-opacity-70 sm:text-xl uppercase p-3 bg-gradient-to-t from-red-500 to-transparent">
               Sliders
             </span>
           </a>
-          <a href="/images.html" :class="$store.hub.navbar === '/sliders.html' && 'outline outline-white'" class="relative flex h-30 mb-3 overflow-hidden cursor-pointer rounded-box group">
+          <a href="/images.html" :class="$store.hub.navbar === '/sliders.html' && 'outline outline-white'" class="relative flex flex-none w-2/5 md:w-1/5 lg:w-full h-30 mb-3 overflow-hidden cursor-pointer rounded-box group">
             <img class="w-full object-cover transform duration-300 group-hover:scale-110" src="/imgs/image-zoom-hover.jpg" />
             <span class="absolute w-full h-full flex items-end text-white text-opacity-70 sm:text-xl uppercase p-3 bg-gradient-to-t from-pink-500 to-transparent">
               Images
             </span>
           </a>
-          <a href="/emulators.html" :class="$store.hub.navbar === '/sliders.html' && 'outline outline-white'" class="relative flex h-30 mb-3 overflow-hidden cursor-pointer rounded-box group">
+          <a href="/emulators.html" :class="$store.hub.navbar === '/sliders.html' && 'outline outline-white'" class="relative flex flex-none w-2/5 md:w-1/5 lg:w-full h-30 mb-3 overflow-hidden cursor-pointer rounded-box group">
             <img class="w-full object-cover transform duration-300 group-hover:scale-110" src="/imgs/phone.jpeg" />
             <span class="absolute w-full h-full flex items-end text-white text-opacity-70 sm:text-xl uppercase p-3 bg-gradient-to-t from-orange-500 to-transparent">
               Emulators
             </span>
           </a>
-          <a href="/coming-soon.html" :class="$store.hub.navbar === '/coming-soon.html' && 'outline outline-white'" class="relative flex h-30 mb-3 overflow-hidden cursor-pointer rounded-box group">
+          <a href="/coming-soon.html" :class="$store.hub.navbar === '/coming-soon.html' && 'outline outline-white'" class="relative flex flex-none w-2/5 md:w-1/5 lg:w-full h-30 mb-3 overflow-hidden cursor-pointer rounded-box group">
             <img class="w-full object-cover transform duration-300 group-hover:scale-110" src="/imgs/weather.png" />
             <span class="absolute w-full h-full flex items-end text-white text-opacity-70 sm:text-xl uppercase p-3 bg-gradient-to-t from-yellow-500 to-transparent">
               Weather
