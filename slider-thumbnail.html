@@ -6,17 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="shortcut icon" type="image/svg+xml" href="/imgs/logo.ico" />
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Mini Widget | The best emulator horizontal components for web">
-  <meta property="og:description" content="Emulator Horizontal Widget ! It has many choices and easy customization with light/dark theme support">
+  <meta property="og:title" content="Mini Widget | The best slider thumbnail with zoom hover components for web">
+  <meta property="og:description" content="Slider Thumbnail With Zoom Hover Widget ! It has many choices and easy customization with light/dark theme support">
   <meta property="og:image" content="https://miniwidget.com/imgs/logo.svg">
   <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:title" content="Mini Widget | The best emulator horizontal components for web">
-  <meta property="twitter:description" content="Emulator Horizontal Widget ! It has many choices and easy customization with light/dark theme support">
+  <meta property="twitter:title" content="Mini Widget | The best slider thumbnail with zoom hover components for web">
+  <meta property="twitter:description" content="Slider Thumbnail With Zoom Hover Widget ! It has many choices and easy customization with light/dark theme support">
   <meta property="twitter:image" content="https://miniwidget.com/imgs/logo.svg">
   <meta name="author" content="kimthiendung@gmail.com">
-  <meta name="keywords" content="emulator horizontal, emulator components, custom element, web component, web module, free components">
-  <meta name="description" content="Emulator Horizontal Widget ! It has many choices and easy customization with light/dark theme support">
-  <title>Mini Widget | The best emulator horizontal components for web</title>
+  <meta name="keywords" content="slider thumbnail, zoom hover, slider components, custom element, web component, web module, free components">
+  <meta name="description" content="Slider Thumbnail With Zoom Hover Widget ! It has many choices and easy customization with light/dark theme support">
+  <title>Mini Widget | The best slider thumbnail with zoom hover components for web</title>
   <style type="text/css" id="style-base">::-webkit-scrollbar{display: none}</style>
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -124,112 +124,117 @@
         </div>        <!-- Main -->
         <div id="main" class="flex-1 overflow-x-hidden rounded-box bg-base-100 p-4 divide-y divide-base-100" x-bind="_stt_main">
           
-          <h1 class="text-2xl font-semibold mb-3 capitalize" title="emulator horizontal">
-            emulator horizontal
-            <span class="flex w-12 border-b-4 border-primary"></span>
-          </h1>
-          <div x-data="{
-            el: document.querySelector('#emulator'),
-            dark: false,
-            widthRatio: 16,
-            heightRatio: 9,
-            borderColor: '#000',
-            position: 'center',
-            camera: true,
-            cameraExtra: false,
-            cameraSize: 16,
-            cameraExtraSize: 16,
-            cameraTop: 0,
-            cameraLeft: 4,
-            tag () {
-              return `<emulator-box 
-                        dark='${this.dark}'
-                        width-ratio='${this.widthRatio}'
-                        height-ratio='${this.heightRatio}'
-                        border-color='${this.borderColor}'
-                        position='${this.position}'
-                        camera='${this.camera}'
-                        camera-extra='${this.cameraExtra}'
-                        camera-size='${this.cameraSize}'
-                        camera-extra-size='${this.cameraExtraSize}'
-                        camera-top='${this.cameraTop}'
-                        camera-left='${this.cameraLeft}'
-                      >${this.el.innerHTML}</emulator-box>`
-            }
-          }">
+          <div>
+            <h1 class="text-2xl font-semibold mb-3 capitalize" title="slider thumbnail with zoom hover">
+              slider thumbnail with zoom hover
+              <span class="flex w-12 border-b-4 border-primary"></span>
+            </h1>
             <div class="md:flex">
-              <div class="flex-1 md:mr-3 mb-3">
-                <emulator-box 
-                  id="emulator"
-                  :dark="dark"
-                  :width-ratio="widthRatio"
-                  :height-ratio="heightRatio"
-                  :border-color="borderColor"
-                  :position="position"
-                  :camera="camera"
-                  :camera-extra="cameraExtra"
-                  :camera-size="cameraSize"
-                  :camera-extra-size="cameraExtraSize"
-                  :camera-top="cameraTop"
-                  :camera-left="cameraLeft"
-                >
-                <iframe height="100%" width="100%" src="https://www.youtube.com/embed/h3h035Eyz5A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </emulator-box>
+              <div class="flex-none md:w-96 md:mr-3 mb-3">
+                <slider-thumbnail
+                  :dark="$store.slider10.dark"
+                  :mode="$store.slider10.mode"
+                  :effect="$store.slider10.effect"
+                  :zoom-hover="$store.slider11.zoomHover"
+                  :thumb-reverse="$store.slider10.thumbReverse"
+                  :thumb-items="$store.slider10.thumbItems"
+                  :control="$store.slider10.control"
+                  :control-middle="$store.slider10.controlMiddle"
+                  :loops="$store.slider10.loops"
+                  :auto-play="$store.slider10.autoPlay"
+                  :lazy-load="$store.slider10.lazyLoad"
+                  :width-ratio="$store.slider10.widthRatio"
+                  :height-ratio="$store.slider10.heightRatio"
+                  :items="$store.slider10.items"
+                />
               </div>
-              <div class="flex-none md:w-96 max-w-full md:grid grid-cols-1 auto-rows-max gap-3 capitalize">
+              <div class="flex-1 max-w-full md:grid md:grid-cols-2 xl:grid-cols-3 auto-rows-max gap-3 capitalize">
                 <label class="label cursor-pointer bg-base-200 rounded-sm px-2">
                   <span class="label-text">dark</span>
-                  <input type="checkbox" :checked="dark" class="checkbox checkbox-primary" x-on:click="dark = !dark"/>
+                  <input type="checkbox" :checked="$store.slider10.dark" class="checkbox checkbox-primary" x-on:click="$store.slider10.dark = !$store.slider10.dark"/>
                 </label>
                 <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
-                  <label class="text-sm mr-2">width ratio</label>
-                  <input type="number" min="1" x-model="widthRatio" class="input input-sm input-primary input-bordered w-full" />
+                  <label class="text-sm mr-2">mode</label>
+                  <select x-model="$store.slider10.mode" class="select select-sm select-primary flex-1 max-w-full">
+                      <option>snap</option>
+                      <option>free</option>
+                      <option>free-snap</option>
+                  </select>
                 </div>
                 <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
-                  <label class="text-sm mr-2">height ratio</label>
-                  <input type="number" min="1" x-model="heightRatio" class="input input-sm input-primary input-bordered w-full" />
-                </div>
-                <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
-                  <label class="text-sm mr-2">border color</label>
-                  <input type="color" x-model="borderColor" class="input input-sm input-primary input-bordered w-full" />
-                </div>
-                <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
-                  <label class="text-sm mr-2">position</label>
-                  <select x-model="position" class="select select-sm select-primary flex-1 max-w-full">
-                      <option>center</option>
-                      <option>right</option>
-                      <option>left</option>
+                  <label class="text-sm mr-2">effect</label>
+                  <select x-model="$store.slider10.effect" class="select select-sm select-primary flex-1 max-w-full">
+                      <option>basic</option>
+                      <option>zoom</option>
+                      <option>fade</option>
                   </select>
                 </div>
                 <label class="label cursor-pointer bg-base-200 rounded-sm px-2">
-                  <span class="label-text">camera</span>
-                  <input type="checkbox" :checked="camera" class="checkbox checkbox-primary" x-on:click="camera = !camera"/>
+                  <span class="label-text">zoom hover</span>
+                  <div class="tooltip tooltip-right" data-tip="launch only once on start">
+                    <input disabled type="checkbox" :checked="$store.slider10.zoomHover" class="checkbox checkbox-primary" x-on:click="$store.slider10.zoomHover = !$store.slider10.zoomHover"/>
+                  </div>
                 </label>
                 <label class="label cursor-pointer bg-base-200 rounded-sm px-2">
-                  <span class="label-text">camera extra</span>
-                  <input type="checkbox" :checked="cameraExtra" class="checkbox checkbox-primary" x-on:click="cameraExtra = !cameraExtra"/>
+                  <span class="label-text">thumb reverse</span>
+                  <input type="checkbox" :checked="$store.slider10.thumbReverse" class="checkbox checkbox-primary" x-on:click="$store.slider10.thumbReverse = !$store.slider10.thumbReverse"/>
                 </label>
                 <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
-                  <label class="text-sm mr-2">camera size</label>
-                  <input type="number" min="1" x-model="cameraSize" class="input input-sm input-primary input-bordered w-full" />
+                  <label class="text-sm mr-2">thumb items</label>
+                  <input type="number" min="1" x-model="$store.slider10.thumbItems" class="input input-sm input-primary input-bordered w-full" />
+                </div>
+                <label class="label cursor-pointer bg-base-200 rounded-sm px-2">
+                  <span class="label-text">control</span>
+                  <input type="checkbox" :checked="$store.slider10.control" class="checkbox checkbox-primary" x-on:click="$store.slider10.control = !$store.slider10.control"/>
+                </label>
+                <label class="label cursor-pointer bg-base-200 rounded-sm px-2">
+                  <span class="label-text">controlMiddle</span>
+                  <input type="checkbox" :checked="$store.slider10.controlMiddle" class="checkbox checkbox-primary" x-on:click="$store.slider10.controlMiddle = !$store.slider10.controlMiddle"/>
+                </label>
+                <label class="label cursor-pointer bg-base-200 rounded-sm px-2">
+                  <span class="label-text">loops</span>
+                  <input type="checkbox" :checked="$store.slider10.loops" class="checkbox checkbox-primary" x-on:click="$store.slider10.loops = !$store.slider10.loops"/>
+                </label>
+                <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
+                  <label class="text-sm mr-2">auto play</label>
+                  <input type="number" min="0" x-model="$store.slider10.autoPlay" class="input input-sm input-primary input-bordered w-full" />
+                </div>
+                <label class="label cursor-pointer bg-base-200 rounded-sm px-2">
+                  <span class="label-text">lazy load</span>
+                  <input type="checkbox" :checked="$store.slider10.lazyLoad" class="checkbox checkbox-primary" x-on:click="$store.slider10.lazyLoad = !$store.slider10.lazyLoad"/>
+                </label>
+                <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
+                  <label class="text-sm mr-2">width ratio</label>
+                  <input type="number" min="1" x-model="$store.slider10.widthRatio" class="input input-sm input-primary input-bordered w-full" />
                 </div>
                 <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
-                  <label class="text-sm mr-2">camera extraSize</label>
-                  <input type="number" min="1" x-model="cameraExtraSize" class="input input-sm input-primary input-bordered w-full" />
+                  <label class="text-sm mr-2">height ratio</label>
+                  <input type="number" min="1" x-model="$store.slider10.heightRatio" class="input input-sm input-primary input-bordered w-full" />
                 </div>
-                <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
-                  <label class="text-sm mr-2">camera left</label>
-                  <input type="number" min="1" x-model="cameraLeft" class="input input-sm input-primary input-bordered w-full" />
+                <div class="md:col-span-2 xl:col-span-3 flex items-center bg-base-200 rounded-sm py-1 px-2">
+                  <label class="text-sm mr-2">items
+                    <div class="flex items-center">
+                      <button class="btn btn-xs btn-outline btn-primary" @click="copy($store.slider10.items)">copy</button>
+                      <div class="tooltip tooltip-right" data-tip="It's array refer to https://jsonformatter.org/">
+                        <a href="https://jsonformatter.org/" target="_blank" class="pl-1 btn btn-xs btn-circle btn-link">
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
+                          </svg>            
+                        </a>
+                      </div>
+                    </div>
+                  </label>
+                  <textarea type="text" x-model="$store.slider10.items" class="textarea textarea-primary textarea-bordered w-full"></textarea>
                 </div>
               </div>
             </div>
             <div class="mt-6">
               <div class="font-semibold">Import into HTML (Include it in your html)</div>
-              <code-markup data='<script type="module" src="https://miniwidget.com/modules/emulator-box.js"></script>' />
+              <code-markup data='<script type="module" src="https://miniwidget.com/modules/slider-thumbnail.js"></script>' />
             </div>
             <div>
               <div class="font-semibold">Usage</div>
-              <code-markup :data="tag()" />
+              <code-markup :data="$store.slider10.tag()" />
             </div>
           </div>
           
