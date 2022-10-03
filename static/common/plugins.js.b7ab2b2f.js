@@ -137,6 +137,7 @@ ${i?'Expression: "'+i+`"
             categories='${this.categories}'
             series='${this.series}' />`}});g.store("barHorizontal",{dark:!1,horizontal:!0,background:!0,colors:["#008FFB","#00E396","#FEB019","#FF4560","#775DD0"],distributed:!0,title:"THE COUNTRY",height:"400px",strokeWidth:1,strokeDashes:0,fillSolid:!1,categories:'["South Korea", "Canada", "United Kingdom", "Netherlands", "Italy", "France", "Japan", "United States", "China", "Germany"]',series:'[ {"name":"Product", "data":[344,355,341,167,222,443,514,725,721,510]} ]',dataLabels:!1,toolbar:!1,table:!0,tableWidth:"auto",tag(){return`<chart-bar 
             dark='${this.dark}'
+            horizontal='${this.horizontal}'
             background='${this.background}'
             colors='${JSON.stringify(this.colors)}'
             distributed='${this.distributed}'
@@ -711,4 +712,14 @@ ${i?'Expression: "'+i+`"
               width-ratio='${this.widthRatio}'
               height-ratio='${this.heightRatio}'
               items='${this.items}'
-              />`}});te.configure({showSpinner:!1});te.start();window.Alpine=g;window.copy=function(t){if(navigator.clipboard&&window.isSecureContext)return navigator.clipboard.writeText(t);{let e=document.createElement("textarea");return e.value=t,e.style.position="fixed",e.style.left="-999999px",e.style.top="-999999px",document.body.appendChild(e),e.focus(),e.select(),new Promise((i,r)=>{document.execCommand("copy")?i():r(),e.remove()})}};g.data("_dd",()=>({_dd_on:!1,_dd_trigger:{["@keydown.escape"](){this._dd_on=!1},["@click"](){this._dd_on=!0}},_dd_main:{["x-show"](){return this._dd_on},["@keydown.escape"](){this._dd_on=!1},["@click.away"](){this._dd_on=!1}}}));g.store("hub",{loading:!0,dark:!!ct.get("dark"),navbar:"",darkToggle(){this.dark=!this.dark,ct.set("dark",this.dark)},sidebar:!!ct.get("sidebar"),sidebarToggle(){this.sidebar=!this.sidebar,ct.set("sidebar",this.sidebar)},init(){this.loading=!1,this.navbar=location.pathname,te.done()}});g.data("_stt",()=>({_stt_on:!1,_stt_trigger:{["@click"](){document.querySelector("#main").scroll({top:0,left:0,behavior:"smooth"})}},_stt_main:{["@scroll"](){this.$el.scrollTop>50?this._stt_on=!0:this._stt_on=!1}}}));g.start();
+              />`}});g.store("fullpage",{items:'["anchor-1","anchor-2","anchor-3", "anchor-4","anchor-5","anchor-6", "anchor-7"]',dark:!0,mode:"snap",vertical:!0,loops:!0,autoPlay:0,effect:"",widthRatio:9,heightRatio:16,fullscreen:!1,tag(){const t=document.querySelector("#full-page-slot");return`<slider-slot 
+              items='${this.items}'
+              dark='${this.dark}'
+              mode='${this.mode}'
+              vertical='${this.vertical}'
+              loops='${this.loops}'
+              auto-play='${this.autoPlay}'
+              effect='${this.effect}'
+              width-ratio='${this.widthRatio}'
+              height-ratio='${this.heightRatio}'
+            >${t.innerHTML}</slider-slot>`}});te.configure({showSpinner:!1});te.start();window.Alpine=g;window.copy=function(t){if(navigator.clipboard&&window.isSecureContext)return navigator.clipboard.writeText(t);{let e=document.createElement("textarea");return e.value=t,e.style.position="fixed",e.style.left="-999999px",e.style.top="-999999px",document.body.appendChild(e),e.focus(),e.select(),new Promise((i,r)=>{document.execCommand("copy")?i():r(),e.remove()})}};g.data("_dd",()=>({_dd_on:!1,_dd_trigger:{["@keydown.escape"](){this._dd_on=!1},["@click"](){this._dd_on=!0}},_dd_main:{["x-show"](){return this._dd_on},["@keydown.escape"](){this._dd_on=!1},["@click.away"](){this._dd_on=!1}}}));g.store("hub",{loading:!0,dark:!!ct.get("dark"),navbar:"",darkToggle(){this.dark=!this.dark,ct.set("dark",this.dark)},sidebar:!!ct.get("sidebar"),sidebarToggle(){this.sidebar=!this.sidebar,ct.set("sidebar",this.sidebar)},init(){this.loading=!1,this.navbar=location.pathname,te.done()}});g.data("_stt",()=>({_stt_on:!1,_stt_trigger:{["@click"](){document.querySelector("#main").scroll({top:0,left:0,behavior:"smooth"})}},_stt_main:{["@scroll"](){this.$el.scrollTop>50?this._stt_on=!0:this._stt_on=!1}}}));g.start();
