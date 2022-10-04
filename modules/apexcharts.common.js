@@ -1,4 +1,8 @@
-var Te={exports:{}};/*!
+/*!
+ * miniwidget v1.0.1 - (c) 2022 by kimthiendung@gmail.com - Apache-2.0 License.
+ *//*!
+ * miniwidget v1.0.1 - (c) 2022 by kimthiendung@gmail.com - Apache-2.0 License.
+ */var Te={exports:{}};/*!
  * ApexCharts v3.35.5
  * (c) 2018-2022 ApexCharts
  * Released under the MIT License.

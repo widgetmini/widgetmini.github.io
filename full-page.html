@@ -6,17 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="shortcut icon" type="image/svg+xml" href="/imgs/logo.ico" />
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Mini Widget | The best slider carousel free mode components for web">
-  <meta property="og:description" content="Slider Carousel Free Mode Widget ! It has many choices and easy customization with light/dark theme support">
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
   <meta property="og:image" content="https://miniwidget.com/imgs/logo.svg">
   <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:title" content="Mini Widget | The best slider carousel free mode components for web">
-  <meta property="twitter:description" content="Slider Carousel Free Mode Widget ! It has many choices and easy customization with light/dark theme support">
+  <meta property="twitter:title" content="">
+  <meta property="twitter:description" content="">
   <meta property="twitter:image" content="https://miniwidget.com/imgs/logo.svg">
   <meta name="author" content="kimthiendung@gmail.com">
-  <meta name="keywords" content="slider carousel free mode, slider components, custom element, web component, web module, free components">
-  <meta name="description" content="Slider Carousel Free Mode Widget ! It has many choices and easy customization with light/dark theme support">
-  <title>Mini Widget | The best slider carousel free mode components for web</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <title></title>
   <style type="text/css" id="style-base">::-webkit-scrollbar{display:none}.sbh::-webkit-scrollbar{display:block;width:0;height:8px;}.sbh::-webkit-scrollbar-thumb{background-color:#ccc;border-radius:8px;}</style>
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -125,86 +125,97 @@
         <div id="main" class="flex-1 overflow-x-hidden rounded-box bg-base-100 p-4 divide-y divide-base-100" x-bind="_stt_main">
           
           <div>
-            <h1 class="text-2xl font-semibold mb-3 capitalize" title="slider carousel free mode">
-              slider carousel free mode
+            <h1 class="text-2xl font-semibold mb-3 capitalize" title="">
+              
               <span class="flex w-12 border-b-4 border-primary"></span>
             </h1>
             <div class="md:flex">
               <div class="flex-none md:w-96 md:mr-3 mb-3">
-                <slider-box
-                  :dark="$store.slider6.dark"
-                  :mode="$store.slider6.mode"
-                  :control="$store.slider6.control"
-                  :effect="$store.slider6.effect"
-                  :control-middle="$store.slider6.controlMiddle"
-                  :dot="$store.slider6.dot"
-                  :loops="$store.slider6.loops"
-                  :auto-play="$store.slider6.autoPlay"
-                  :lazy-load="$store.slider6.lazyLoad"
-                  :per-view="$store.slider6.perView"
-                  :spacing="$store.slider6.spacing"
-                  :width-ratio="$store.slider6.widthRatio"
-                  :height-ratio="$store.slider6.heightRatio"
-                  :items="$store.slider6.items"
-                />
+                <emulator-box 
+                    dark='false'
+                    width-ratio='9.3'
+                    height-ratio='16'
+                    border-color='#000'
+                    position='center'
+                    camera='true'
+                    camera-extra='true'
+                    camera-size='16'
+                    camera-extra-size='16'
+                    camera-top='4'
+                    fullscreen
+                  >
+                  <div id="emulator-main" class="absolute w-full h-full top-0 left-0">
+                    <script>
+                      function slideChange(e){
+                        console.log(e.detail)
+                      }
+                    </script>
+                    <full-page
+                      anchor="anchor-3"
+                      :items="$store.fullpage.items"
+                      :mode="$store.fullpage.mode"
+                      :vertical="$store.fullpage.vertical"
+                      :effect="$store.fullpage.effect"
+                      :loops="$store.fullpage.loops"
+                      :auto-play="$store.fullpage.autoPlay"
+                      :width-ratio="$store.fullpage.widthRatio"
+                      :height-ratio="$store.fullpage.heightRatio"
+                      resize="#emulator-main"
+                      onchange="javascript:slideChange(event)"
+                      id="full-page-slot"
+                    >
+                    <div slot="anchor-1" class="flex h-full bg-primary text-white items-center justify-center text-4xl">1</div>
+                    <div slot="anchor-2" class="flex h-full bg-secondary text-white items-center justify-center text-4xl">2</div>
+                    <div slot="anchor-3" class="flex h-full bg-accent text-white items-center justify-center text-4xl">3</div>
+                    <div slot="anchor-4" class="flex h-full bg-info text-white items-center justify-center text-4xl">4</div>
+                    <div slot="anchor-5" class="flex h-full bg-success text-white items-center justify-center text-4xl">5</div>
+                    <div slot="anchor-6" class="flex h-full bg-warning text-white items-center justify-center text-4xl">6</div>
+                    <div slot="anchor-7" class="flex h-full bg-error text-white items-center justify-center text-4xl">7</div>
+                    </full-page>
+                  </div>
+                </emulator-box>
               </div>
               <div class="flex-1 max-w-full md:grid md:grid-cols-2 xl:grid-cols-3 auto-rows-max gap-3 capitalize">
-                <label class="label cursor-pointer bg-base-200 rounded-sm px-2">
-                  <span class="label-text">dark</span>
-                  <input type="checkbox" :checked="$store.slider6.dark" class="checkbox checkbox-primary" x-on:click="$store.slider6.dark = !$store.slider6.dark"/>
-                </label>
                 <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
                   <label class="text-sm mr-2">mode</label>
-                  <select x-model="$store.slider6.mode" class="select select-sm select-primary flex-1 max-w-full">
+                  <select x-model="$store.fullpage.mode" class="select select-sm select-primary flex-1 max-w-full">
                       <option>snap</option>
-                      <option>free</option>
                       <option>free-snap</option>
+                      <option>free</option>
                   </select>
                 </div>
                 <label class="label cursor-pointer bg-base-200 rounded-sm px-2">
-                  <span class="label-text">control</span>
-                  <input type="checkbox" :checked="$store.slider6.control" class="checkbox checkbox-primary" x-on:click="$store.slider6.control = !$store.slider6.control"/>
+                  <span class="label-text">vertical</span>
+                  <input type="checkbox" :checked="$store.fullpage.vertical" class="checkbox checkbox-primary" x-on:click="$store.fullpage.vertical = !$store.fullpage.vertical"/>
                 </label>
-                <label class="label cursor-pointer bg-base-200 rounded-sm px-2">
-                  <span class="label-text">controlMiddle</span>
-                  <input type="checkbox" :checked="$store.slider6.controlMiddle" class="checkbox checkbox-primary" x-on:click="$store.slider6.controlMiddle = !$store.slider6.controlMiddle"/>
-                </label>
-                <label class="label cursor-pointer bg-base-200 rounded-sm px-2">
-                  <span class="label-text">dot</span>
-                  <input type="checkbox" :checked="$store.slider6.dot" class="checkbox checkbox-primary" x-on:click="$store.slider6.dot = !$store.slider6.dot"/>
-                </label>
+                <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
+                  <label class="text-sm mr-2">effect</label>
+                  <select x-model="$store.fullpage.effect" class="select select-sm select-primary flex-1 max-w-full">
+                      <option>basic</option>
+                      <option>zoom</option>
+                      <option>fade</option>
+                  </select>
+                </div>
                 <label class="label cursor-pointer bg-base-200 rounded-sm px-2">
                   <span class="label-text">loops</span>
-                  <input type="checkbox" :checked="$store.slider6.loops" class="checkbox checkbox-primary" x-on:click="$store.slider6.loops = !$store.slider6.loops"/>
+                  <input type="checkbox" :checked="$store.fullpage.loops" class="checkbox checkbox-primary" x-on:click="$store.fullpage.loops = !$store.fullpage.loops"/>
                 </label>
                 <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
                   <label class="text-sm mr-2">auto play</label>
-                  <input type="number" min="0" x-model="$store.slider6.autoPlay" class="input input-sm input-primary input-bordered w-full" />
-                </div>
-                <label class="label cursor-pointer bg-base-200 rounded-sm px-2">
-                  <span class="label-text">lazy load</span>
-                  <input type="checkbox" :checked="$store.slider6.lazyLoad" class="checkbox checkbox-primary" x-on:click="$store.slider6.lazyLoad = !$store.slider6.lazyLoad"/>
-                </label>
-                <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
-                  <label class="text-sm mr-2">per view</label>
-                  <input type="number" min="1" x-model="$store.slider6.perView" class="input input-sm input-primary input-bordered w-full" />
-                </div>
-                <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
-                  <label class="text-sm mr-2">spacing</label>
-                  <input type="number" min="0" x-model="$store.slider6.spacing" class="input input-sm input-primary input-bordered w-full" />
+                  <input type="number" min="0" x-model="$store.fullpage.autoPlay" class="input input-sm input-primary input-bordered w-full" />
                 </div>
                 <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
                   <label class="text-sm mr-2">width ratio</label>
-                  <input type="number" min="1" x-model="$store.slider6.widthRatio" class="input input-sm input-primary input-bordered w-full" />
+                  <input type="number" min="1" x-model="$store.fullpage.widthRatio" class="input input-sm input-primary input-bordered w-full" />
                 </div>
                 <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
                   <label class="text-sm mr-2">height ratio</label>
-                  <input type="number" min="1" x-model="$store.slider6.heightRatio" class="input input-sm input-primary input-bordered w-full" />
+                  <input type="number" min="1" x-model="$store.fullpage.heightRatio" class="input input-sm input-primary input-bordered w-full" />
                 </div>
                 <div class="md:col-span-2 xl:col-span-3 flex items-center bg-base-200 rounded-sm py-1 px-2">
                   <label class="text-sm mr-2">items
                     <div class="flex items-center">
-                      <button class="btn btn-xs btn-outline btn-primary" @click="copy($store.slider6.items)">copy</button>
+                      <button class="btn btn-xs btn-outline btn-primary" @click="copy($store.slider5.items)">copy</button>
                       <div class="tooltip tooltip-right" data-tip="It's array refer to https://jsonformatter.org/">
                         <a href="https://jsonformatter.org/" target="_blank" class="pl-1 btn btn-xs btn-circle btn-link">
                           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -214,17 +225,17 @@
                       </div>
                     </div>
                   </label>
-                  <textarea type="text" x-model="$store.slider6.items" class="textarea textarea-primary textarea-bordered w-full"></textarea>
+                  <textarea type="text" x-model="$store.fullpage.items" class="textarea textarea-primary textarea-bordered w-full"></textarea>
                 </div>
               </div>
             </div>
             <div class="mt-6">
               <div class="font-semibold">Import into HTML (Include it in your html)</div>
-              <code-markup data='<script type="module" src="https://miniwidget.com/modules/slider-box.js"></script>' />
+              <code-markup data='<script type="module" src="modules/full-page.js"></script>' />
             </div>
             <div>
               <div class="font-semibold">Usage</div>
-              <code-markup :data="$store.slider6.tag()" />
+              <code-markup :data="$store.fullpage.tag()" />
             </div>
           </div>
           

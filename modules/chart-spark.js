@@ -1,4 +1,8 @@
-import{c as B,a as M,u as X,h as t}from"./css.js";import{u as $,a as A}from"./hooks.js";import{A as N}from"./apexcharts.common.js";import{u as E}from"./use-effect.js";function l({dark:h,background:i,type:g,color:s,title:v,symbol:m,customSum:d,strokeWidth:u,strokeDashes:y,fillSolid:x,borderBottom:f,values:o}){const p=X(),[n,k]=$(()=>{}),z=[s],c=A(()=>{const r=o.reduce((Y,S)=>Y+S,0);if(r===0)return{sum:0,up:!0,growth:"0%"};let e=0,a=0;o.length>1&&(a=o[o.length-1]||0,e=o[o.length-2]||0);const w=a-e,j=w>0,C=Math.abs(100*w/r).toFixed(2)+"%";return{sum:r.toLocaleString(),up:j,growth:C}},[o]),b={chart:{type:"area",toolbar:{show:!1},sparkline:{enabled:!0}},stroke:{curve:"smooth",width:u,dashArray:y},theme:{mode:"dark"},colors:z,fill:{type:x?"solid":"gradient",opacity:.5},tooltip:{custom:function({series:r,seriesIndex:e,dataPointIndex:a}){return`
+import{c as B,a as M,u as X,h as t}from"./css.js";import{u as $,a as A}from"./hooks.js";import{A as N}from"./apexcharts.common.js";import{u as E}from"./use-effect.js";/*!
+ * miniwidget v1.0.1 - (c) 2022 by kimthiendung@gmail.com - Apache-2.0 License.
+ *//*!
+ * miniwidget v1.0.1 - (c) 2022 by kimthiendung@gmail.com - Apache-2.0 License.
+ */function l({dark:h,background:i,type:g,color:s,title:v,symbol:m,customSum:d,strokeWidth:u,strokeDashes:y,fillSolid:x,borderBottom:f,values:o}){const p=X(),[n,k]=$(()=>{}),z=[s],c=A(()=>{const r=o.reduce((Y,S)=>Y+S,0);if(r===0)return{sum:0,up:!0,growth:"0%"};let e=0,a=0;o.length>1&&(a=o[o.length-1]||0,e=o[o.length-2]||0);const w=a-e,j=w>0,C=Math.abs(100*w/r).toFixed(2)+"%";return{sum:r.toLocaleString(),up:j,growth:C}},[o]),b={chart:{type:"area",toolbar:{show:!1},sparkline:{enabled:!0}},stroke:{curve:"smooth",width:u,dashArray:y},theme:{mode:"dark"},colors:z,fill:{type:x?"solid":"gradient",opacity:.5},tooltip:{custom:function({series:r,seriesIndex:e,dataPointIndex:a}){return`
           <div class="px-2">
             ${r[e][a]}</div>
           </div>
