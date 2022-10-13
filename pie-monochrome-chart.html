@@ -27,13 +27,13 @@
   <!-- End Google Tag Manager -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7138616487261351" crossorigin="anonymous"></script>
   <script type="module" crossorigin src="/static/common/apexcharts.1ffe166b.js"></script>
-  <script type="module" crossorigin src="/static/common/plugins.js.fa5e178a.js"></script>
-  <script type="module" crossorigin src="/static/common/charts.js.189c1a10.js"></script>
+  <script type="module" crossorigin src="/static/common/plugins.js.3ca5d96b.js"></script>
+  <script type="module" crossorigin src="/static/common/charts.js.8d154417.js"></script>
   <script type="module" crossorigin src="/static/common/highlight.js.f3015274.js"></script>
   <script type="module" crossorigin src="/static/common/plyr.ea0f65b7.js"></script>
   <script type="module" crossorigin src="/static/common/keen-slider.014b2aed.js"></script>
-  <script type="module" crossorigin src="/static/common/main.57c6333b.js"></script>
-  <link rel="stylesheet" href="/static/common/main.9e6de4c5.css">
+  <script type="module" crossorigin src="/static/common/main.84afa21d.js"></script>
+  <link rel="stylesheet" href="/static/common/main.58aeb5ac.css">
   <link rel="stylesheet" href="/static/common/plugins.af5de7ef.css">
   <link rel="stylesheet" href="/static/common/highlight.eac0d35b.css">
   <link rel="stylesheet" href="/static/common/plyr.f7ca2171.css">
@@ -41,7 +41,7 @@
 </head>
 
 <body x-data="_stt" :data-theme="[$store.hub.dark ? 'dark': 'light']">
-  <div class="bg-neutral-content text-base-content min-h-screen" id="app" :style="{opacity: $store.hub.loading ? 0: 1}">
+  <div class="bg-base-200 text-base-content min-h-screen" id="app" :style="{opacity: $store.hub.loading ? 0: 1}">
     <div class="w-full flex flex-col lg:h-screen items-stretch lg:overflow-hidden">
       <div class="flex-none w-full p-3">
         <div class="flex items-center justify-between">
@@ -103,13 +103,13 @@
               Sliders
             </span>
           </a>
-          <a href="/images.html" :class="$store.hub.navbar === '/sliders.html' && 'outline outline-white'" class="relative flex flex-none w-2/5 md:w-1/5 lg:w-full h-30 mb-3 overflow-hidden cursor-pointer rounded-box group">
+          <a href="/images.html" :class="$store.hub.navbar === '/images.html' && 'outline outline-white'" class="relative flex flex-none w-2/5 md:w-1/5 lg:w-full h-30 mb-3 overflow-hidden cursor-pointer rounded-box group">
             <img class="w-full object-cover transform duration-300 group-hover:scale-110" src="/imgs/image-zoom-hover.jpg" />
             <span class="absolute w-full h-full flex items-end text-white text-opacity-70 sm:text-xl uppercase p-3 bg-gradient-to-t from-pink-500 to-transparent">
               Images
             </span>
           </a>
-          <a href="/emulators.html" :class="$store.hub.navbar === '/sliders.html' && 'outline outline-white'" class="relative flex flex-none w-2/5 md:w-1/5 lg:w-full h-30 mb-3 overflow-hidden cursor-pointer rounded-box group">
+          <a href="/emulators.html" :class="$store.hub.navbar === '/emulators.html' && 'outline outline-white'" class="relative flex flex-none w-2/5 md:w-1/5 lg:w-full h-30 mb-3 overflow-hidden cursor-pointer rounded-box group">
             <img class="w-full object-cover transform duration-300 group-hover:scale-110" src="/imgs/phone.jpeg" />
             <span class="absolute w-full h-full flex items-end text-white text-opacity-70 sm:text-xl uppercase p-3 bg-gradient-to-t from-orange-500 to-transparent">
               Emulators
@@ -122,7 +122,7 @@
             </span>
           </a>
         </div>        <!-- Main -->
-        <div id="main" class="flex-1 overflow-x-hidden rounded-box bg-base-100 p-4 divide-y divide-base-100" x-bind="_stt_main">
+        <div id="main" class="flex-1 overflow-x-hidden rounded-box bg-base-100 shadow-lg p-4" x-bind="_stt_main">
           
           <div>
             <h1 class="text-2xl font-semibold mb-3 capitalize" title="pie monochrome chart">
@@ -152,57 +152,57 @@
             <div class="md:grid md:grid-cols-2 xl:grid-cols-3 auto-rows-max gap-3 capitalize">
               <label class="label cursor-pointer bg-base-200 rounded-sm px-2">
                 <span class="label-text">dark</span>
-                <input type="checkbox" :checked="$store.pieMono.dark" class="checkbox checkbox-primary" x-on:click="$store.pieMono.dark = !$store.pieMono.dark"/>
+                <input type="checkbox" :checked="$store.pieMono.dark" class="checkbox" x-on:click="$store.pieMono.dark = !$store.pieMono.dark"/>
               </label>
               <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
                 <label class="text-sm mr-2">type</label>
-                <input type="text" x-model="$store.pieMono.type" disabled class="input input-sm input-primary input-bordered w-full" />
+                <input type="text" x-model="$store.pieMono.type" disabled class="input input-sm input-bordered w-full" />
               </div>
               <label class="label cursor-pointer bg-base-200 rounded-sm px-2">
                 <span class="label-text">background</span>
-                <input type="checkbox" :checked="$store.pieMono.background" class="checkbox checkbox-primary" x-on:click="$store.pieMono.background = !$store.pieMono.background"/>
+                <input type="checkbox" :checked="$store.pieMono.background" class="checkbox" x-on:click="$store.pieMono.background = !$store.pieMono.background"/>
               </label>
               <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
                 <label class="text-sm mr-2">colors</label>
                 <template x-for="(color, i) in $store.pieMono.colors">
-                  <input type="color" x-model="$store.pieMono.colors[i]" class="input input-sm input-primary input-bordered w-full" />
+                  <input type="color" x-model="$store.pieMono.colors[i]" class="input input-sm input-bordered w-full" />
                 </template>
               </div>
               <label class="label cursor-pointer bg-base-200 rounded-sm px-2">
                 <span class="label-text">monochrome</span>
-                <input type="checkbox" :checked="$store.pieMono.monochrome" class="checkbox checkbox-primary" x-on:click="$store.pieMono.monochrome = !$store.pieMono.monochrome"/>
+                <input type="checkbox" :checked="$store.pieMono.monochrome" class="checkbox" x-on:click="$store.pieMono.monochrome = !$store.pieMono.monochrome"/>
               </label>
               <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
                 <label class="text-sm mr-2">title</label>
-                <input type="text" x-model="$store.pieMono.title" class="input input-sm input-primary input-bordered w-full" />
+                <input type="text" x-model="$store.pieMono.title" class="input input-sm input-bordered w-full" />
               </div>
               <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
                 <label class="text-sm mr-2">height</label>
-                <input type="text" x-model="$store.pieMono.height" class="input input-sm input-primary input-bordered w-full" />
+                <input type="text" x-model="$store.pieMono.height" class="input input-sm input-bordered w-full" />
               </div>
               <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
                 <label class="text-sm mr-2">stroke width</label>
-                <input type="number" min="0" x-model="$store.pieMono.strokeWidth" class="input input-sm input-primary input-bordered w-full" />
+                <input type="number" min="0" x-model="$store.pieMono.strokeWidth" class="input input-sm input-bordered w-full" />
               </div>
               <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
                 <label class="text-sm mr-2">stroke dashes</label>
-                <input type="number" min="0" x-model="$store.pieMono.strokeDashes" class="input input-sm input-primary input-bordered w-full" />
+                <input type="number" min="0" x-model="$store.pieMono.strokeDashes" class="input input-sm input-bordered w-full" />
               </div>
               <label class="label cursor-pointer bg-base-200 rounded-sm px-2">
                 <span class="label-text">fill solid</span>
-                <input type="checkbox" :checked="$store.pieMono.fillSolid" class="checkbox checkbox-primary" x-on:click="$store.pieMono.fillSolid = !$store.pieMono.fillSolid"/>
+                <input type="checkbox" :checked="$store.pieMono.fillSolid" class="checkbox" x-on:click="$store.pieMono.fillSolid = !$store.pieMono.fillSolid"/>
               </label>
               <label class="label cursor-pointer bg-base-200 rounded-sm px-2">
                 <span class="label-text">data labels</span>
-                <input type="checkbox" :checked="$store.pieMono.dataLabels" class="checkbox checkbox-primary" x-on:click="$store.pieMono.dataLabels = !$store.pieMono.dataLabels"/>
+                <input type="checkbox" :checked="$store.pieMono.dataLabels" class="checkbox" x-on:click="$store.pieMono.dataLabels = !$store.pieMono.dataLabels"/>
               </label>
               <label class="label cursor-pointer bg-base-200 rounded-sm px-2">
                 <span class="label-text">toolbar</span>
-                <input type="checkbox" :checked="$store.pieMono.toolbar" class="checkbox checkbox-primary" x-on:click="$store.pieMono.toolbar = !$store.pieMono.toolbar"/>
+                <input type="checkbox" :checked="$store.pieMono.toolbar" class="checkbox" x-on:click="$store.pieMono.toolbar = !$store.pieMono.toolbar"/>
               </label>
               <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
                 <label class="text-sm mr-2">table width</label>
-                <input type="text" x-model="$store.pieMono.tableWidth" class="input input-sm input-primary input-bordered w-full" />
+                <input type="text" x-model="$store.pieMono.tableWidth" class="input input-sm input-bordered w-full" />
               </div>
               <div class="md:col-span-2 xl:col-span-3 flex items-center bg-base-200 rounded-sm py-1 px-2">
                 <label class="text-sm mr-2">categories
@@ -217,7 +217,7 @@
                     </div>
                   </div>
                 </label>
-                <textarea type="text" x-model="$store.pieMono.categories" class="textarea textarea-primary textarea-bordered w-full"></textarea>
+                <textarea type="text" x-model="$store.pieMono.categories" class="textarea textarea-bordered w-full"></textarea>
               </div>
               <div class="md:col-span-2 xl:col-span-3 flex items-center bg-base-200 rounded-sm py-1 px-2">
                 <label class="text-sm mr-2">values
@@ -232,7 +232,7 @@
                     </div>
                   </div>
                 </label>
-                <textarea type="text" x-model="$store.pieMono.values" class="textarea textarea-primary textarea-bordered w-full"></textarea>
+                <textarea type="text" x-model="$store.pieMono.values" class="textarea textarea-bordered w-full"></textarea>
               </div>
             </div>
           </div>

@@ -27,13 +27,13 @@
   <!-- End Google Tag Manager -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7138616487261351" crossorigin="anonymous"></script>
   <script type="module" crossorigin src="/static/common/apexcharts.1ffe166b.js"></script>
-  <script type="module" crossorigin src="/static/common/plugins.js.fa5e178a.js"></script>
-  <script type="module" crossorigin src="/static/common/charts.js.189c1a10.js"></script>
+  <script type="module" crossorigin src="/static/common/plugins.js.3ca5d96b.js"></script>
+  <script type="module" crossorigin src="/static/common/charts.js.8d154417.js"></script>
   <script type="module" crossorigin src="/static/common/highlight.js.f3015274.js"></script>
   <script type="module" crossorigin src="/static/common/plyr.ea0f65b7.js"></script>
   <script type="module" crossorigin src="/static/common/keen-slider.014b2aed.js"></script>
-  <script type="module" crossorigin src="/static/common/main.57c6333b.js"></script>
-  <link rel="stylesheet" href="/static/common/main.9e6de4c5.css">
+  <script type="module" crossorigin src="/static/common/main.84afa21d.js"></script>
+  <link rel="stylesheet" href="/static/common/main.58aeb5ac.css">
   <link rel="stylesheet" href="/static/common/plugins.af5de7ef.css">
   <link rel="stylesheet" href="/static/common/highlight.eac0d35b.css">
   <link rel="stylesheet" href="/static/common/plyr.f7ca2171.css">
@@ -41,7 +41,7 @@
 </head>
 
 <body x-data="_stt" :data-theme="[$store.hub.dark ? 'dark': 'light']">
-  <div class="bg-neutral-content text-base-content min-h-screen" id="app" :style="{opacity: $store.hub.loading ? 0: 1}">
+  <div class="bg-base-200 text-base-content min-h-screen" id="app" :style="{opacity: $store.hub.loading ? 0: 1}">
     <div class="w-full flex flex-col lg:h-screen items-stretch lg:overflow-hidden">
       <div class="flex-none w-full p-3">
         <div class="flex items-center justify-between">
@@ -103,13 +103,13 @@
               Sliders
             </span>
           </a>
-          <a href="/images.html" :class="$store.hub.navbar === '/sliders.html' && 'outline outline-white'" class="relative flex flex-none w-2/5 md:w-1/5 lg:w-full h-30 mb-3 overflow-hidden cursor-pointer rounded-box group">
+          <a href="/images.html" :class="$store.hub.navbar === '/images.html' && 'outline outline-white'" class="relative flex flex-none w-2/5 md:w-1/5 lg:w-full h-30 mb-3 overflow-hidden cursor-pointer rounded-box group">
             <img class="w-full object-cover transform duration-300 group-hover:scale-110" src="/imgs/image-zoom-hover.jpg" />
             <span class="absolute w-full h-full flex items-end text-white text-opacity-70 sm:text-xl uppercase p-3 bg-gradient-to-t from-pink-500 to-transparent">
               Images
             </span>
           </a>
-          <a href="/emulators.html" :class="$store.hub.navbar === '/sliders.html' && 'outline outline-white'" class="relative flex flex-none w-2/5 md:w-1/5 lg:w-full h-30 mb-3 overflow-hidden cursor-pointer rounded-box group">
+          <a href="/emulators.html" :class="$store.hub.navbar === '/emulators.html' && 'outline outline-white'" class="relative flex flex-none w-2/5 md:w-1/5 lg:w-full h-30 mb-3 overflow-hidden cursor-pointer rounded-box group">
             <img class="w-full object-cover transform duration-300 group-hover:scale-110" src="/imgs/phone.jpeg" />
             <span class="absolute w-full h-full flex items-end text-white text-opacity-70 sm:text-xl uppercase p-3 bg-gradient-to-t from-orange-500 to-transparent">
               Emulators
@@ -122,7 +122,7 @@
             </span>
           </a>
         </div>        <!-- Main -->
-        <div id="main" class="flex-1 overflow-x-hidden rounded-box bg-base-100 p-4 divide-y divide-base-100" x-bind="_stt_main">
+        <div id="main" class="flex-1 overflow-x-hidden rounded-box bg-base-100 shadow-lg p-4" x-bind="_stt_main">
           
           <div>
             <h1 class="text-2xl font-semibold mb-3 capitalize" title="slider custom slot">
@@ -172,11 +172,11 @@
               <div class="flex-1 max-w-full md:grid md:grid-cols-2 xl:grid-cols-3 auto-rows-max gap-3 capitalize">   
                 <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
                   <label class="text-sm mr-2">items</label>
-                  <input type="number" min="1" x-model="$store.slider9.items" class="input input-sm input-primary input-bordered w-full" />
+                  <input type="number" min="1" x-model="$store.slider9.items" class="input input-sm input-bordered w-full" />
                 </div>
                 <label class="label cursor-pointer bg-base-200 rounded-sm px-2">
                   <span class="label-text">dark</span>
-                  <input type="checkbox" :checked="$store.slider9.dark" class="checkbox checkbox-primary" x-on:click="$store.slider9.dark = !$store.slider9.dark"/>
+                  <input type="checkbox" :checked="$store.slider9.dark" class="checkbox" x-on:click="$store.slider9.dark = !$store.slider9.dark"/>
                 </label>
                 <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
                   <label class="text-sm mr-2">mode</label>
@@ -188,7 +188,7 @@
                 </div>
                 <label class="label cursor-pointer bg-base-200 rounded-sm px-2">
                   <span class="label-text">vertical</span>
-                  <input type="checkbox" :checked="$store.slider9.vertical" class="checkbox checkbox-primary" x-on:click="$store.slider9.vertical = !$store.slider9.vertical"/>
+                  <input type="checkbox" :checked="$store.slider9.vertical" class="checkbox" x-on:click="$store.slider9.vertical = !$store.slider9.vertical"/>
                 </label>
                 <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
                   <label class="text-sm mr-2">effect</label>
@@ -200,47 +200,47 @@
                 </div>
                 <label class="label cursor-pointer bg-base-200 rounded-sm px-2">
                   <span class="label-text">control</span>
-                  <input type="checkbox" :checked="$store.slider9.control" class="checkbox checkbox-primary" x-on:click="$store.slider9.control = !$store.slider9.control"/>
+                  <input type="checkbox" :checked="$store.slider9.control" class="checkbox" x-on:click="$store.slider9.control = !$store.slider9.control"/>
                 </label>
                 <label class="label cursor-pointer bg-base-200 rounded-sm px-2">
                   <span class="label-text">controlMiddle</span>
-                  <input type="checkbox" :checked="$store.slider9.controlMiddle" class="checkbox checkbox-primary" x-on:click="$store.slider9.controlMiddle = !$store.slider9.controlMiddle"/>
+                  <input type="checkbox" :checked="$store.slider9.controlMiddle" class="checkbox" x-on:click="$store.slider9.controlMiddle = !$store.slider9.controlMiddle"/>
                 </label>
                 <label class="label cursor-pointer bg-base-200 rounded-sm px-2">
                   <span class="label-text">dot</span>
-                  <input type="checkbox" :checked="$store.slider9.dot" class="checkbox checkbox-primary" x-on:click="$store.slider9.dot = !$store.slider9.dot"/>
+                  <input type="checkbox" :checked="$store.slider9.dot" class="checkbox" x-on:click="$store.slider9.dot = !$store.slider9.dot"/>
                 </label>
                 <label class="label cursor-pointer bg-base-200 rounded-sm px-2">
                   <span class="label-text">loops</span>
-                  <input type="checkbox" :checked="$store.slider9.loops" class="checkbox checkbox-primary" x-on:click="$store.slider9.loops = !$store.slider9.loops"/>
+                  <input type="checkbox" :checked="$store.slider9.loops" class="checkbox" x-on:click="$store.slider9.loops = !$store.slider9.loops"/>
                 </label>
                 <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
                   <label class="text-sm mr-2">auto play</label>
-                  <input type="number" min="0" x-model="$store.slider9.autoPlay" class="input input-sm input-primary input-bordered w-full" />
+                  <input type="number" min="0" x-model="$store.slider9.autoPlay" class="input input-sm input-bordered w-full" />
                 </div>
                 <label class="label cursor-pointer bg-base-200 rounded-sm px-2">
                   <span class="label-text">lazy load</span>
-                  <input type="checkbox" :checked="$store.slider9.lazyLoad" class="checkbox checkbox-primary" x-on:click="$store.slider9.lazyLoad = !$store.slider9.lazyLoad"/>
+                  <input type="checkbox" :checked="$store.slider9.lazyLoad" class="checkbox" x-on:click="$store.slider9.lazyLoad = !$store.slider9.lazyLoad"/>
                 </label>
                 <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
                   <label class="text-sm mr-2">per view</label>
-                  <input type="number" min="1" x-model="$store.slider9.perView" class="input input-sm input-primary input-bordered w-full" />
+                  <input type="number" min="1" x-model="$store.slider9.perView" class="input input-sm input-bordered w-full" />
                 </div>
                 <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
                   <label class="text-sm mr-2">spacing</label>
-                  <input type="number" min="0" x-model="$store.slider9.spacing" class="input input-sm input-primary input-bordered w-full" />
+                  <input type="number" min="0" x-model="$store.slider9.spacing" class="input input-sm input-bordered w-full" />
                 </div>
                 <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
                   <label class="text-sm mr-2">width ratio</label>
-                  <input type="number" min="1" x-model="$store.slider9.widthRatio" class="input input-sm input-primary input-bordered w-full" />
+                  <input type="number" min="1" x-model="$store.slider9.widthRatio" class="input input-sm input-bordered w-full" />
                 </div>
                 <div class="flex items-center bg-base-200 rounded-sm py-1 px-2">
                   <label class="text-sm mr-2">height ratio</label>
-                  <input type="number" min="1" x-model="$store.slider9.heightRatio" class="input input-sm input-primary input-bordered w-full" />
+                  <input type="number" min="1" x-model="$store.slider9.heightRatio" class="input input-sm input-bordered w-full" />
                 </div>
                 <label class="label cursor-pointer bg-base-200 rounded-sm px-2">
                   <span class="label-text">center slide</span>
-                  <input type="checkbox" :checked="$store.slider9.centerSlides" class="checkbox checkbox-primary" x-on:click="$store.slider9.centerSlides = !$store.slider9.centerSlides"/>
+                  <input type="checkbox" :checked="$store.slider9.centerSlides" class="checkbox" x-on:click="$store.slider9.centerSlides = !$store.slider9.centerSlides"/>
                 </label>
               </div>
             </div>

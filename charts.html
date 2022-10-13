@@ -27,13 +27,13 @@
   <!-- End Google Tag Manager -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7138616487261351" crossorigin="anonymous"></script>
   <script type="module" crossorigin src="/static/common/apexcharts.1ffe166b.js"></script>
-  <script type="module" crossorigin src="/static/common/plugins.js.fa5e178a.js"></script>
-  <script type="module" crossorigin src="/static/common/charts.js.189c1a10.js"></script>
+  <script type="module" crossorigin src="/static/common/plugins.js.3ca5d96b.js"></script>
+  <script type="module" crossorigin src="/static/common/charts.js.8d154417.js"></script>
   <script type="module" crossorigin src="/static/common/highlight.js.f3015274.js"></script>
   <script type="module" crossorigin src="/static/common/plyr.ea0f65b7.js"></script>
   <script type="module" crossorigin src="/static/common/keen-slider.014b2aed.js"></script>
-  <script type="module" crossorigin src="/static/common/main.57c6333b.js"></script>
-  <link rel="stylesheet" href="/static/common/main.9e6de4c5.css">
+  <script type="module" crossorigin src="/static/common/main.84afa21d.js"></script>
+  <link rel="stylesheet" href="/static/common/main.58aeb5ac.css">
   <link rel="stylesheet" href="/static/common/plugins.af5de7ef.css">
   <link rel="stylesheet" href="/static/common/highlight.eac0d35b.css">
   <link rel="stylesheet" href="/static/common/plyr.f7ca2171.css">
@@ -41,7 +41,7 @@
 </head>
 
 <body x-data="_stt" :data-theme="[$store.hub.dark ? 'dark': 'light']">
-  <div class="bg-neutral-content text-base-content min-h-screen" id="app" :style="{opacity: $store.hub.loading ? 0: 1}">
+  <div class="bg-base-200 text-base-content min-h-screen" id="app" :style="{opacity: $store.hub.loading ? 0: 1}">
     <div class="w-full flex flex-col lg:h-screen items-stretch lg:overflow-hidden">
       <div class="flex-none w-full p-3">
         <div class="flex items-center justify-between">
@@ -103,13 +103,13 @@
               Sliders
             </span>
           </a>
-          <a href="/images.html" :class="$store.hub.navbar === '/sliders.html' && 'outline outline-white'" class="relative flex flex-none w-2/5 md:w-1/5 lg:w-full h-30 mb-3 overflow-hidden cursor-pointer rounded-box group">
+          <a href="/images.html" :class="$store.hub.navbar === '/images.html' && 'outline outline-white'" class="relative flex flex-none w-2/5 md:w-1/5 lg:w-full h-30 mb-3 overflow-hidden cursor-pointer rounded-box group">
             <img class="w-full object-cover transform duration-300 group-hover:scale-110" src="/imgs/image-zoom-hover.jpg" />
             <span class="absolute w-full h-full flex items-end text-white text-opacity-70 sm:text-xl uppercase p-3 bg-gradient-to-t from-pink-500 to-transparent">
               Images
             </span>
           </a>
-          <a href="/emulators.html" :class="$store.hub.navbar === '/sliders.html' && 'outline outline-white'" class="relative flex flex-none w-2/5 md:w-1/5 lg:w-full h-30 mb-3 overflow-hidden cursor-pointer rounded-box group">
+          <a href="/emulators.html" :class="$store.hub.navbar === '/emulators.html' && 'outline outline-white'" class="relative flex flex-none w-2/5 md:w-1/5 lg:w-full h-30 mb-3 overflow-hidden cursor-pointer rounded-box group">
             <img class="w-full object-cover transform duration-300 group-hover:scale-110" src="/imgs/phone.jpeg" />
             <span class="absolute w-full h-full flex items-end text-white text-opacity-70 sm:text-xl uppercase p-3 bg-gradient-to-t from-orange-500 to-transparent">
               Emulators
@@ -122,7 +122,7 @@
             </span>
           </a>
         </div>        <!-- Main -->
-        <div id="main" class="flex-1 overflow-x-hidden rounded-box bg-base-100 p-4 divide-y divide-base-100" x-bind="_stt_main">
+        <div id="main" class="flex-1 overflow-x-hidden rounded-box bg-base-100 shadow-lg p-4" x-bind="_stt_main">
           
           <h1 class="hidden" title="chart components">
             chart components
@@ -150,15 +150,15 @@
             </h2>
             <div class="grid grid-cols-1 md:grid-cols-3 2xl:grid-cols-4 gap-3">
               <a href="/spark-area-chart.html" class="bg-base-300 shadow-lg rounded-sm duration-300 transform hover:-translate-y-1 hover:shadow-xl">
-                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-base-100">Spark Area Chart</h3>
+                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-neutral">Spark Area Chart</h3>
                 <img src="/imgs/spark-area.png" class="bg-white w-full">
               </a>
               <a href="/spark-bar-chart.html" class="bg-base-300 shadow-lg rounded-sm duration-300 transform hover:-translate-y-1 hover:shadow-xl">
-                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-base-100">Spark Bar Chart</h3>
+                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-neutral">Spark Bar Chart</h3>
                 <img src="/imgs/spark-bar.png" class="bg-white w-full">
               </a>
               <a href="/spark-area-chart.html" class="bg-base-300 shadow-lg rounded-sm duration-300 transform hover:-translate-y-1 hover:shadow-xl">
-                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-base-100">Spark Line Chart</h3>
+                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-neutral">Spark Line Chart</h3>
                 <img src="/imgs/spark-line.png" class="bg-white w-full">
               </a>
             </div>
@@ -170,15 +170,15 @@
             </h2>
             <div class="grid grid-cols-1 md:grid-cols-3 2xl:grid-cols-4 gap-3">
               <a href="/line-chart.html" class="bg-base-300 shadow-lg rounded-sm duration-300 transform hover:-translate-y-1 hover:shadow-xl">
-                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-base-100">Basic Line Chart</h3>
+                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-neutral">Basic Line Chart</h3>
                 <img src="/imgs/line-chart.png" class="bg-white w-full">
               </a>
               <a href="/line-multi-chart.html" class="bg-base-300 shadow-lg rounded-sm duration-300 transform hover:-translate-y-1 hover:shadow-xl">
-                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-base-100">Line Multi Chart</h3>
+                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-neutral">Line Multi Chart</h3>
                 <img src="/imgs/line-multi-chart.png" class="bg-white w-full">
               </a>
               <a href="/line-stepline-chart.html" class="bg-base-300 shadow-lg rounded-sm duration-300 transform hover:-translate-y-1 hover:shadow-xl">
-                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-base-100">Line Stepline Chart</h3>
+                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-neutral">Line Stepline Chart</h3>
                 <img src="/imgs/line-stepline-chart.png" class="bg-white w-full">
               </a>
             </div>
@@ -190,23 +190,23 @@
             </h2>
             <div class="grid grid-cols-1 md:grid-cols-3 2xl:grid-cols-4 gap-3">
               <a href="/area-chart.html" class="bg-base-300 shadow-lg rounded-sm duration-300 transform hover:-translate-y-1 hover:shadow-xl">
-                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-base-100">Basic Area Chart</h3>
+                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-neutral">Basic Area Chart</h3>
                 <img src="/imgs/area-chart.png" class="bg-white w-full">
               </a>
               <a href="/area-multi-chart.html" class="bg-base-300 shadow-lg rounded-sm duration-300 transform hover:-translate-y-1 hover:shadow-xl">
-                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-base-100">Area Multi Chart</h3>
+                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-neutral">Area Multi Chart</h3>
                 <img src="/imgs/area-multi-chart.png" class="bg-white w-full">
               </a>
               <a href="/area-stepline-chart.html" class="bg-base-300 shadow-lg rounded-sm duration-300 transform hover:-translate-y-1 hover:shadow-xl">
-                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-base-100">Area Stepline Chart</h3>
+                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-neutral">Area Stepline Chart</h3>
                 <img src="/imgs/area-stepline-chart.png" class="bg-white w-full">
               </a>
               <a href="/area-multi-stacked-chart.html" class="bg-base-300 shadow-lg rounded-sm duration-300 transform hover:-translate-y-1 hover:shadow-xl">
-                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-base-100">Area Multi Stacked Chart</h3>
+                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-neutral">Area Multi Stacked Chart</h3>
                 <img src="/imgs/area-multi-stacked-chart.png" class="bg-white w-full">
               </a>
               <a href="/area-null-values-chart.html" class="bg-base-300 shadow-lg rounded-sm duration-300 transform hover:-translate-y-1 hover:shadow-xl">
-                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-base-100">Area Null Values Chart</h3>
+                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-neutral">Area Null Values Chart</h3>
                 <img src="/imgs/area-null-values-chart.png" class="bg-white w-full">
               </a>
             </div>
@@ -218,27 +218,27 @@
             </h2>
             <div class="grid grid-cols-1 md:grid-cols-3 2xl:grid-cols-4 gap-3">
               <a href="/bar-chart.html" class="bg-base-300 shadow-lg rounded-sm duration-300 transform hover:-translate-y-1 hover:shadow-xl">
-                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-base-100">Basic Bar Chart</h3>
+                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-neutral">Basic Bar Chart</h3>
                 <img src="/imgs/bar-chart.png" class="bg-white w-full">
               </a>
               <a href="/bar-horizontal-chart.html" class="bg-base-300 shadow-lg rounded-sm duration-300 transform hover:-translate-y-1 hover:shadow-xl">
-                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-base-100">Bar Horizontal Chart</h3>
+                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-neutral">Bar Horizontal Chart</h3>
                 <img src="/imgs/bar-horizontal-chart.png" class="bg-white w-full">
               </a>
               <a href="/bar-group-chart.html" class="bg-base-300 shadow-lg rounded-sm duration-300 transform hover:-translate-y-1 hover:shadow-xl">
-                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-base-100">Bar Group Chart</h3>
+                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-neutral">Bar Group Chart</h3>
                 <img src="/imgs/bar-group-chart.png" class="bg-white w-full">
               </a>
               <a href="/bar-group-horizontal-chart.html" class="bg-base-300 shadow-lg rounded-sm duration-300 transform hover:-translate-y-1 hover:shadow-xl">
-                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-base-100">Bar Group Horizontal Chart</h3>
+                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-neutral">Bar Group Horizontal Chart</h3>
                 <img src="/imgs/bar-group-horizontal-chart.png" class="bg-white w-full">
               </a>
               <a href="/bar-postive-negative-chart.html" class="bg-base-300 shadow-lg rounded-sm duration-300 transform hover:-translate-y-1 hover:shadow-xl">
-                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-base-100">Bar Postive Negative Chart</h3>
+                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-neutral">Bar Postive Negative Chart</h3>
                 <img src="/imgs/bar-postive-negative-chart.png" class="bg-white w-full">
               </a>
               <a href="/bar-postive-negative-custom-chart.html" class="bg-base-300 shadow-lg rounded-sm duration-300 transform hover:-translate-y-1 hover:shadow-xl">
-                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-base-100">Bar Postive Negative Chart 2</h3>
+                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-neutral">Bar Postive Negative Chart 2</h3>
                 <img src="/imgs/bar-postive-negative-custom-chart.png" class="bg-white w-full">
               </a>
             </div>
@@ -250,19 +250,19 @@
             </h2>
             <div class="grid grid-cols-1 md:grid-cols-3 2xl:grid-cols-4 gap-3">
               <a href="/bar-stacked-chart.html" class="bg-base-300 shadow-lg rounded-sm duration-300 transform hover:-translate-y-1 hover:shadow-xl">
-                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-base-100">Bar Stacked Chart</h3>
+                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-neutral">Bar Stacked Chart</h3>
                 <img src="/imgs/bar-stacked-chart.png" class="bg-white w-full">
               </a>
               <a href="/bar-stacked-100-chart.html" class="bg-base-300 shadow-lg rounded-sm duration-300 transform hover:-translate-y-1 hover:shadow-xl">
-                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-base-100">Bar Stacked 100% Chart</h3>
+                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-neutral">Bar Stacked 100% Chart</h3>
                 <img src="/imgs/bar-stacked-100-chart.png" class="bg-white w-full">
               </a>
               <a href="/bar-stacked-horizontal-chart.html" class="bg-base-300 shadow-lg rounded-sm duration-300 transform hover:-translate-y-1 hover:shadow-xl">
-                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-base-100">Bar Stacked Horizontal Chart</h3>
+                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-neutral">Bar Stacked Horizontal Chart</h3>
                 <img src="/imgs/bar-stacked-horizontal-chart.png" class="bg-white w-full">
               </a>
               <a href="/bar-stacked-horizontal-100-chart.html" class="bg-base-300 shadow-lg rounded-sm duration-300 transform hover:-translate-y-1 hover:shadow-xl">
-                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-base-100">Bar Stacked Horizontal 100% Chart</h3>
+                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-neutral">Bar Stacked Horizontal 100% Chart</h3>
                 <img src="/imgs/bar-stacked-horizontal-100-chart.png" class="bg-white w-full">
               </a>
             </div>
@@ -274,19 +274,19 @@
             </h2>
             <div class="grid grid-cols-1 md:grid-cols-3 2xl:grid-cols-4 gap-3">
               <a href="/mixed-chart.html" class="bg-base-300 shadow-lg rounded-sm duration-300 transform hover:-translate-y-1 hover:shadow-xl">
-                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-base-100">Basic Mixed Chart</h3>
+                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-neutral">Basic Mixed Chart</h3>
                 <img src="/imgs/mixed-chart.png" class="bg-white w-full">
               </a>
               <a href="/mixed-line-area-chart.html" class="bg-base-300 shadow-lg rounded-sm duration-300 transform hover:-translate-y-1 hover:shadow-xl">
-                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-base-100">Mixed Line Area Chart</h3>
+                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-neutral">Mixed Line Area Chart</h3>
                 <img src="/imgs/mixed-line-area-chart.png" class="bg-white w-full">
               </a>
               <a href="/mixed-line-bar-chart.html" class="bg-base-300 shadow-lg rounded-sm duration-300 transform hover:-translate-y-1 hover:shadow-xl">
-                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-base-100">Mixed Line Bar Chart</h3>
+                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-neutral">Mixed Line Bar Chart</h3>
                 <img src="/imgs/mixed-line-bar-chart.png" class="bg-white w-full">
               </a>
               <a href="/mixed-multi-yaxis-chart.html" class="bg-base-300 shadow-lg rounded-sm duration-300 transform hover:-translate-y-1 hover:shadow-xl">
-                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-base-100">Mixed Multi Yaxis Chart</h3>
+                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-neutral">Mixed Multi Yaxis Chart</h3>
                 <img src="/imgs/mixed-multi-yaxis-chart.png" class="bg-white w-full">
               </a>
             </div>
@@ -298,19 +298,19 @@
             </h2>
             <div class="grid grid-cols-1 md:grid-cols-3 2xl:grid-cols-4 gap-3">
               <a href="/pie-chart.html" class="bg-base-300 shadow-lg rounded-sm duration-300 transform hover:-translate-y-1 hover:shadow-xl">
-                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-base-100">Basic Pie Chart</h3>
+                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-neutral">Basic Pie Chart</h3>
                 <img src="/imgs/pie-chart.png" class="bg-white w-full">
               </a>
               <a href="/pie-monochrome-chart.html" class="bg-base-300 shadow-lg rounded-sm duration-300 transform hover:-translate-y-1 hover:shadow-xl">
-                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-base-100">Pie Monochrome Chart</h3>
+                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-neutral">Pie Monochrome Chart</h3>
                 <img src="/imgs/pie-monochrome-chart.png" class="bg-white w-full">
               </a>
               <a href="/pie-donut-chart.html" class="bg-base-300 shadow-lg rounded-sm duration-300 transform hover:-translate-y-1 hover:shadow-xl">
-                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-base-100">Pie Donut Chart</h3>
+                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-neutral">Pie Donut Chart</h3>
                 <img src="/imgs/pie-donut-chart.png" class="bg-white w-full">
               </a>
               <a href="/pie-donut-monochrome-chart.html" class="bg-base-300 shadow-lg rounded-sm duration-300 transform hover:-translate-y-1 hover:shadow-xl">
-                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-base-100">Pie Donut Monochrome Chart</h3>
+                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-neutral">Pie Donut Monochrome Chart</h3>
                 <img src="/imgs/pie-donut-monochrome-chart.png" class="bg-white w-full">
               </a>
             </div>
@@ -322,11 +322,11 @@
             </h2>
             <div class="grid grid-cols-1 md:grid-cols-3 2xl:grid-cols-4 gap-3">
               <a href="/polar-chart.html" class="bg-base-300 shadow-lg rounded-sm duration-300 transform hover:-translate-y-1 hover:shadow-xl">
-                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-base-100">Basic Polar Chart</h3>
+                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-neutral">Basic Polar Chart</h3>
                 <img src="/imgs/polar-chart.png" class="bg-white w-full">
               </a>
               <a href="/polar-monochrome-chart.html" class="bg-base-300 shadow-lg rounded-sm duration-300 transform hover:-translate-y-1 hover:shadow-xl">
-                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-base-100">Polar Monochrome Chart</h3>
+                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-neutral">Polar Monochrome Chart</h3>
                 <img src="/imgs/polar-monochrome-chart.png" class="bg-white w-full">
               </a>
             </div>
@@ -338,27 +338,27 @@
             </h2>
             <div class="grid grid-cols-1 md:grid-cols-3 2xl:grid-cols-4 gap-3">
               <a href="/radial-bar-chart.html" class="bg-base-300 shadow-lg rounded-sm duration-300 transform hover:-translate-y-1 hover:shadow-xl">
-                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-base-100">Basic Radial Bar Chart</h3>
+                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-neutral">Basic Radial Bar Chart</h3>
                 <img src="/imgs/radial-bar-chart.png" class="bg-white w-full">
               </a>
               <a href="/radial-bar-multi-chart.html" class="bg-base-300 shadow-lg rounded-sm duration-300 transform hover:-translate-y-1 hover:shadow-xl">
-                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-base-100">Radial Bar Multi Chart</h3>
+                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-neutral">Radial Bar Multi Chart</h3>
                 <img src="/imgs/radial-bar-multi-chart.png" class="bg-white w-full">
               </a>
               <a href="/radial-bar-monochrome-chart.html" class="bg-base-300 shadow-lg rounded-sm duration-300 transform hover:-translate-y-1 hover:shadow-xl">
-                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-base-100">Radial Bar Monochrome Chart</h3>
+                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-neutral">Radial Bar Monochrome Chart</h3>
                 <img src="/imgs/radial-bar-monochrome-chart.png" class="bg-white w-full">
               </a>
               <a href="/radial-bar-gauge-chart.html" class="bg-base-300 shadow-lg rounded-sm duration-300 transform hover:-translate-y-1 hover:shadow-xl">
-                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-base-100">Radial Bar Gauge Chart</h3>
+                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-neutral">Radial Bar Gauge Chart</h3>
                 <img src="/imgs/radial-bar-gauge-chart.png" class="bg-white w-full">
               </a>
               <a href="/radial-bar-gauge-semi-chart.html" class="bg-base-300 shadow-lg rounded-sm duration-300 transform hover:-translate-y-1 hover:shadow-xl">
-                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-base-100">Radial Bar Gauge Semi Chart</h3>
+                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-neutral">Radial Bar Gauge Semi Chart</h3>
                 <img src="/imgs/radial-bar-gauge-semi-chart.png" class="bg-white w-full">
               </a>
               <a href="/radial-bar-custom-chart.html" class="bg-base-300 shadow-lg rounded-sm duration-300 transform hover:-translate-y-1 hover:shadow-xl">
-                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-base-100">Radial Bar Custom Chart</h3>
+                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-neutral">Radial Bar Custom Chart</h3>
                 <img src="/imgs/radial-bar-custom-chart.png" class="bg-white w-full">
               </a>
             </div>
@@ -370,15 +370,15 @@
             </h2>
             <div class="grid grid-cols-1 md:grid-cols-3 2xl:grid-cols-4 gap-3">
               <a href="/radar-chart.html" class="bg-base-300 shadow-lg rounded-sm duration-300 transform hover:-translate-y-1 hover:shadow-xl">
-                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-base-100">Radar Chart</h3>
+                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-neutral">Radar Chart</h3>
                 <img src="/imgs/radar-chart.png" class="bg-white w-full">
               </a>
               <a href="/radar-multi-chart.html" class="bg-base-300 shadow-lg rounded-sm duration-300 transform hover:-translate-y-1 hover:shadow-xl">
-                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-base-100">Radar Multi Chart</h3>
+                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-neutral">Radar Multi Chart</h3>
                 <img src="/imgs/radar-multi-chart.png" class="bg-white w-full">
               </a>
               <a href="/radar-polygon-chart.html" class="bg-base-300 shadow-lg rounded-sm duration-300 transform hover:-translate-y-1 hover:shadow-xl">
-                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-base-100">Radar Polygon Chart</h3>
+                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-neutral">Radar Polygon Chart</h3>
                 <img src="/imgs/radar-polygon-chart.png" class="bg-white w-full">
               </a>
             </div>
@@ -390,7 +390,7 @@
             </h2>
             <div class="grid grid-cols-1 md:grid-cols-3 2xl:grid-cols-4 gap-3">
               <a href="#" class="bg-base-300 shadow-lg rounded-sm duration-300 transform hover:-translate-y-1 hover:shadow-xl">
-                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-base-100">Basic Bar Chart</h3>
+                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-neutral">Basic Bar Chart</h3>
                 <img src="/imgs/area-chart.png" class="bg-white w-full">
               </a>
             </div>
@@ -402,7 +402,7 @@
             </h2>
             <div class="grid grid-cols-1 md:grid-cols-3 2xl:grid-cols-4 gap-3">
               <a href="#" class="bg-base-300 shadow-lg rounded-sm duration-300 transform hover:-translate-y-1 hover:shadow-xl">
-                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-base-100">Basic Bar Chart</h3>
+                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-neutral">Basic Bar Chart</h3>
                 <img src="/imgs/area-chart.png" class="bg-white w-full">
               </a>
             </div>
@@ -414,7 +414,7 @@
             </h2>
             <div class="grid grid-cols-1 md:grid-cols-3 2xl:grid-cols-4 gap-3">
               <a href="#" class="bg-base-300 shadow-lg rounded-sm duration-300 transform hover:-translate-y-1 hover:shadow-xl">
-                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-base-100">Basic Bar Chart</h3>
+                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-neutral">Basic Bar Chart</h3>
                 <img src="/imgs/area-chart.png" class="bg-white w-full">
               </a>
             </div>
@@ -426,7 +426,7 @@
             </h2>
             <div class="grid grid-cols-1 md:grid-cols-3 2xl:grid-cols-4 gap-3">
               <a href="#" class="bg-base-300 shadow-lg rounded-sm duration-300 transform hover:-translate-y-1 hover:shadow-xl">
-                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-base-100">Basic Bar Chart</h3>
+                <h3 class="text-center text-lg font-semibold bg-base-200 py-2 border-b border-neutral">Basic Bar Chart</h3>
                 <img src="/imgs/area-chart.png" class="bg-white w-full">
               </a>
             </div>
